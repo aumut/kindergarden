@@ -1,0 +1,75 @@
+* {
+  box-sizing: border-box;
+}
+*:focus, *:active {
+  outline: none !important;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: "Comfortaa-Regular", Arial, sans-serif;
+  font-size: 1rem;
+  color: red;
+  line-height: 1.18;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  background-color: #FFFFFF;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+  color: inherit;
+}
+a:hover, a:active {
+  text-decoration: none;
+  color: inherit;
+}
+
+h1, h2, h3, h4, h5, p, ul, ol {
+  margin: 0;
+  padding: 0;
+}
+
+h2 {
+  font-size: calc(30em/16);
+  line-height: 1.115;
+}
+
+h3 {
+  font-size: calc(18em/16);
+  line-height: 1.11;
+}
+
+.title {
+  color: red;
+  font-family: "Comfortaa-Bold", Arial, sans-serif;
+  text-align: center;
+}
+
+.bl {
+  width: calc(100% - calc(310em/16));
+  margin-left: calc(310em/16);
+  margin-bottom: calc(50em/16);
+}
+.bl-sm .bl-in {
+  width: 57%;
+  background-color: #B4FFB7;
+  margin: 0 auto;
+  padding: 35px 50px;
+}
+.bl h2.title {
+  margin-bottom: calc(8em/16);
+}
+
+.container {
+  width: 100%;
+  padding: 0 calc(60em/16) 0 calc(35em/16);
+  background-color: #EDEDED;
+}
+
+/*# sourceMappingURL=general.css.map */

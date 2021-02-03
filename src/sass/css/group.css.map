@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAEE,WAAM;EACJ,OAAO,EAAE,IAAI;EACb,SAAS,EAAE,IAAI;;AACjB,WAAM;EACJ,KAAK,EAAE,GAAG;EACV,aAAa,EAAE,IAAI;;AACnB,kBAAM;EACJ,aAAa,EAAE,IAAI;;AACvB,WAAM;EACJ,UAAU,EAAE,IAAI;;AAChB,cAAE;EACA,aAAa,EAAE,IAAI;;AACnB,yBAAY;EACV,aAAa,EAAE,CAAC;;AACtB,YAAO;EACL,WAAW,ECVO,mCAAmC;;ADcrD,oBAAM;EACJ,UAAU,EAAE,IAAI;;AAClB,sBAAQ;EACN,aAAa,EAAE,IAAI",
+"sources": ["../content/group.sass","../general/variables.sass"],
+"names": [],
+"file": "group.css"
+}

@@ -1,3 +1,4 @@
+@import "variables"
 *
   &:focus, &:active
     outline: none !important
@@ -5,20 +6,18 @@
 
 html
   //overflow: hidden
-  font-size: 12px
+  font-size: $fontSize_body
 
 body
   font:
-    family: "Arial"
+    family: $font_Comfortaa_Regular
     size: 1rem
-    weight: 300
-  color: blue
-  line-height: 1.2
+  color: $main_font
+  line-height: $lineHeight_body
   margin: 0
   padding: 0
   height: 100vh
-  background-color: blue
-  overflow-y: hidden
+  background-color: $main_bg
 
 
 a
@@ -30,5 +29,38 @@ a
     color: inherit
 
 h1, h2, h3, h4, h5, p, ul, ol
-  margin: 0px
-  padding: 0px
+  margin: 0
+  padding: 0
+
+h2
+  font-size: $fontSize_h2
+  line-height: $lineHeight_h2
+
+
+h3
+  font-size: $fontSize_h3
+  line-height: $lineHeight_h3
+
+
+.title
+  color: $main_font
+  font-family: $font_Comfortaa_Bold
+  text-align: center
+
+.bl
+  width: calc(100% - #{$nav_w})
+  margin-left: #{$nav_w}
+  margin-bottom: calc(50em/16)
+  &-sm
+    .bl-in
+      width: 57%
+      background-color: $themecolor
+      margin: 0 auto
+      padding: 35px 50px
+  h2.title
+    margin-bottom: calc(8em/16)
+
+.container
+  width: 100%
+  padding: 0 calc(60em/16) 0 calc(35em/16)
+  background-color: #EDEDED

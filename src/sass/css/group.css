@@ -1,0 +1,31 @@
+.group-wrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+.group-item {
+  width: 33%;
+  margin-bottom: 50px;
+}
+.group-item .title {
+  margin-bottom: 15px;
+}
+.group-info {
+  list-style: none;
+}
+.group-info li {
+  margin-bottom: 15px;
+}
+.group-info li:last-child {
+  margin-bottom: 0;
+}
+.group-label {
+  font-family: "Comfortaa-Bold", Arial, sans-serif;
+}
+.group .bl-in .title {
+  text-align: left;
+}
+.group .bl-in > .title {
+  margin-bottom: 30px;
+}
+
+/*# sourceMappingURL=group.css.map */

@@ -1,0 +1,17 @@
+.aboutus-item {
+  margin-bottom: 35px;
+}
+.aboutus-item:last-child {
+  margin-bottom: 0px;
+}
+.aboutus .bl-in {
+  text-align: center;
+}
+.aboutus ul {
+  list-style: none;
+}
+.aboutus li {
+  margin-bottom: 25px;
+}
+
+/*# sourceMappingURL=aboutus.css.map */

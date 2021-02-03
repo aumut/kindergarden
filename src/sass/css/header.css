@@ -1,0 +1,9 @@
+.header {
+  background-color: transparent;
+  background-image: url("../images/bg_top.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 270px;
+}
+
+/*# sourceMappingURL=header.css.map */

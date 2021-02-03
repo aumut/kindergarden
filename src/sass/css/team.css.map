@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AACE,kBAAY;EACV,SAAS,EAAE,GAAG;EACd,YAAY,EAAE,aAAa;;AAC7B,2BAAqB;EACnB,WAAW,EAAE,CAAC;EACd,aAAa,EAAE,aAAa;;AAC9B,eAAS;EACP,aAAa,EAAE,aAAa;;AAC9B,gBAAY;EACV,aAAa,EAAE,aAAa;;AAE5B,aAAE;EACA,aAAa,EAAE,aAAa",
+"sources": ["../content/team.sass"],
+"names": [],
+"file": "team.css"
+}

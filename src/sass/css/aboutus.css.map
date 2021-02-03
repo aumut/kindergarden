@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AACE,aAAM;EACJ,aAAa,EAAE,IAAI;;AACnB,wBAAY;EACV,aAAa,EAAE,GAAG;;AACtB,eAAM;EACJ,UAAU,EAAE,MAAM;;AACpB,WAAE;EACA,UAAU,EAAE,IAAI;;AAClB,WAAE;EACA,aAAa,EAAE,IAAI",
+"sources": ["../content/aboutus.sass"],
+"names": [],
+"file": "aboutus.css"
+}
