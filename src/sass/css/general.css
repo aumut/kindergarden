@@ -37,11 +37,4 @@ h1, h2, h3, h4, h5, p, ul, ol {
   padding: 0px;
 }
 
-@font-face {
-  font-family: "MontserratAlt-Light";
-  font-style: normal;
-  font-weight: normal;
-  src: local("MontserratAlt-Light"), url("../fonts/MontserratAlt-Light/MontserratAlternates-Light.woff") format("woff"), url("../fonts/MontserratAlt-Light/MontserratAlternates-Light.woff2") format("woff2"), url("../fonts/MontserratAlt-Light/MontserratAlternates-Light.ttf") format("ttf"), url("../fonts/MontserratAlt-Light/MontserratAlternates-Light.eot") format("eot");
-}
-
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=general.css.map */
