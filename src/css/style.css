@@ -6,20 +6,18 @@
 }
 
 html {
-  font-size: 12px;
+  font-size: 16px;
 }
 
 body {
-  font-family: "Arial";
+  font-family: "Comfortaa-Regular", Arial, sans-serif;
   font-size: 1rem;
-  font-weight: 300;
-  color: blue;
-  line-height: 1.2;
+  color: red;
+  line-height: 1.18;
   margin: 0;
   padding: 0;
   height: 100vh;
-  background-color: blue;
-  overflow-y: hidden;
+  background-color: #FFFFFF;
 }
 
 a {
@@ -33,15 +31,203 @@ a:hover, a:active {
 }
 
 h1, h2, h3, h4, h5, p, ul, ol {
-  margin: 0px;
-  padding: 0px;
+  margin: 0;
+  padding: 0;
+}
+
+h2 {
+  font-size: calc(30em/16);
+  line-height: 1.115;
+}
+
+h3 {
+  font-size: calc(18em/16);
+  line-height: 1.11;
+}
+
+.title {
+  color: red;
+  font-family: "Comfortaa-Bold", Arial, sans-serif;
+  text-align: center;
+}
+
+.bl {
+  width: calc(100% - calc(310em/16));
+  margin-left: calc(310em/16);
+  margin-bottom: calc(50em/16);
+}
+.bl-sm .bl-in {
+  width: 57%;
+  background-color: #B4FFB7;
+  margin: 0 auto;
+  padding: 35px 50px;
+}
+.bl h2.title {
+  margin-bottom: calc(8em/16);
+}
+
+.container {
+  width: 100%;
+  padding: 0 calc(60em/16) 0 calc(35em/16);
+  background-color: #EDEDED;
+}
+
+.menu {
+  background-color: #B4FFB7;
+  padding: calc(20em/16) calc(20em/16) 0 calc(60em/16);
+  width: calc(310em/16);
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+.menu ul {
+  display: flex;
+  flex-direction: column;
+  font-size: calc(20em/16);
+  line-height: 1.11;
+}
+.menu li {
+  display: inline-block;
+  text-align: center;
+  margin-bottom: 1em;
+}
+.menu li a {
+  padding: calc(30em/20) 10px;
+}
+
+.logo {
+  background-color: yellow;
+  width: 100%;
+  border: 1px solid red;
+  height: 150px;
+  margin-bottom: calc(30em/16);
+}
+
+.header {
+  background-color: transparent;
+  background-image: url("../images/bg_top.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 270px;
+}
+
+.bl-info .bl-in {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-right: calc(20em/16);
+  height: 450px;
+  overflow-y: scroll;
+}
+.bl-info-item {
+  display: flex;
+  width: 48%;
+  margin-bottom: calc(30em/16);
+}
+.bl-info-descr {
+  display: flex;
+  flex-direction: column;
+}
+.bl-info-img {
+  min-width: 49%;
+  height: calc(250em/16);
+  background-color: grey;
+  margin-right: calc(10em/16);
+}
+.bl-info-detail {
+  align-self: flex-end;
+  color: #8D8D8D;
+}
+.bl-info-date {
+  color: #8D8D8D;
+}
+
+.bl-info-descr .title {
+  text-align: left;
+  margin-bottom: calc(15em/18);
+}
+.bl-info-descr .bl-info-date {
+  margin-bottom: calc(15em/16);
+}
+.bl-info-descr .bl-info-text {
+  margin-bottom: calc(15em/16);
+}
+
+.aboutus-item {
+  margin-bottom: 35px;
+}
+.aboutus-item:last-child {
+  margin-bottom: 0px;
+}
+.aboutus .bl-in {
+  text-align: center;
+}
+.aboutus ul {
+  list-style: none;
+}
+.aboutus li {
+  margin-bottom: 25px;
+}
+
+.team .bl-info-img {
+  min-width: 34%;
+  margin-right: calc(25em/16);
+}
+.team .bl-info-descr .title {
+  line-height: 2;
+  margin-bottom: calc(22em/18);
+}
+.team .subtitle {
+  margin-bottom: calc(35em/18);
+}
+.team-info-title {
+  margin-bottom: calc(15em/18);
+}
+.team-info li {
+  margin-bottom: calc(35em/18);
+}
+
+.group-wrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+.group-item {
+  width: 33%;
+  margin-bottom: 50px;
+}
+.group-item .title {
+  margin-bottom: 15px;
+}
+.group-info {
+  list-style: none;
+}
+.group-info li {
+  margin-bottom: 15px;
+}
+.group-info li:last-child {
+  margin-bottom: 0;
+}
+.group-label {
+  font-family: "Comfortaa-Bold", Arial, sans-serif;
+}
+.group .bl-in .title {
+  text-align: left;
+}
+.group .bl-in > .title {
+  margin-bottom: 30px;
 }
 
 @font-face {
-  font-family: "MontserratAlt-Light";
+  font-family: "Comfortaa-Bold";
   font-style: normal;
-  font-weight: normal;
-  src: local("MontserratAlt-Light"), url("../fonts/MontserratAlt-Light/MontserratAlternates-Light.woff") format("woff"), url("../fonts/MontserratAlt-Light/MontserratAlternates-Light.woff2") format("woff2"), url("../fonts/MontserratAlt-Light/MontserratAlternates-Light.ttf") format("ttf"), url("../fonts/MontserratAlt-Light/MontserratAlternates-Light.eot") format("eot");
+  font-weight: 700;
+  src: local("Comfortaa-Bold"), url("../fonts/Comfortaa-Bold.woff") format("woff"), url("../fonts/Comfortaa-Bold.woff2") format("woff2"), url("../fonts/Comfortaa-Bold.ttf") format("ttf"), url("../fonts/Comfortaa-Bold.eot") format("eot");
+}
+@font-face {
+  font-family: "Comfortaa-Regular";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Comfortaa-Regular"), url("../fonts/Comfortaa-Regular.woff") format("woff"), url("../fonts/Comfortaa-Regular.woff2") format("woff2"), url("../fonts/Comfortaa-Regular.ttf") format("ttf"), url("../fonts/Comfortaa-Regular.eot") format("eot");
 }
 
 /*# sourceMappingURL=style.css.map */
