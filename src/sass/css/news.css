@@ -8,7 +8,7 @@
 }
 .bl-info-item {
   display: flex;
-  width: 48%;
+  width: 49%;
   margin-bottom: calc(30em/16);
 }
 .bl-info-descr {
@@ -38,6 +38,24 @@
 }
 .bl-info-descr .bl-info-text {
   margin-bottom: calc(15em/16);
+}
+
+.news {
+  position: relative;
+  padding-top: calc(270em/16);
+}
+.news:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: calc(400em/16);
+  z-index: -1;
+  background-color: #29AEFA;
+  background-image: url("../images/bg_top.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 /*# sourceMappingURL=news.css.map */
