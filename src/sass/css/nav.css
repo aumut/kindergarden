@@ -18,7 +18,7 @@
   margin-bottom: 1em;
 }
 .menu li a {
-  padding: calc(30em/20) 10px;
+  padding: calc(30em/20) calc(10em/20);
 }
 
 .logo {

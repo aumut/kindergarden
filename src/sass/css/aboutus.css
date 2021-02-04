@@ -1,8 +1,8 @@
 .aboutus-item {
-  margin-bottom: 35px;
+  margin-bottom: calc(35em/16);
 }
 .aboutus-item:last-child {
-  margin-bottom: 0px;
+  margin-bottom: 0;
 }
 .aboutus .bl-in {
   text-align: center;
@@ -11,7 +11,18 @@
   list-style: none;
 }
 .aboutus li {
-  margin-bottom: 25px;
+  margin-bottom: calc(25em/16);
+}
+.aboutus .container {
+  position: relative;
+}
+.aboutus .orange {
+  bottom: -40px;
+  left: 15px;
+}
+.aboutus .aqua {
+  top: -40px;
+  right: 40px;
 }
 
 /*# sourceMappingURL=aboutus.css.map */
