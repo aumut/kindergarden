@@ -2,6 +2,7 @@
   background-color: #B4FFB7;
   padding: calc(20em/16) calc(20em/16) 0 calc(60em/16);
   width: calc(310em/16);
+  height: 100%;
   position: fixed;
   top: 0;
   left: 0;
@@ -19,6 +20,10 @@
 }
 .menu li a {
   padding: calc(30em/20) calc(10em/20);
+}
+.menu .flag-ic {
+  left: -10px;
+  top: 40px;
 }
 
 .logo {

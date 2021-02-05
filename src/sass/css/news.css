@@ -57,5 +57,9 @@
   background-repeat: no-repeat;
   background-size: cover;
 }
+.news .flag-ic {
+  top: 70px;
+  right: 0;
+}
 
 /*# sourceMappingURL=news.css.map */

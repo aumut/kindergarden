@@ -1,0 +1,27 @@
+.contacts .bl-in {
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+}
+.contacts-map {
+  min-width: 615px;
+  background-color: #8D8D8D;
+}
+.contacts-address {
+  margin-left: 10px;
+  display: flex;
+  flex-direction: column;
+  padding: 0 5px 35px 0;
+}
+.contacts-address .title {
+  text-align: left;
+  margin-bottom: 15px;
+}
+.contacts-address ul {
+  list-style: none;
+}
+.contacts-address li {
+  margin-bottom: 15px;
+}
+
+/*# sourceMappingURL=contacts.css.map */

@@ -9,6 +9,7 @@
 </head>
 <body>
 <nav class="menu">
+    <svg class="flag-ic red"><use xlink:href="#flag" /></svg>
     <a href="#" class="logo"><img src="" alt=""></a>
     <ul>
         <li><a href="#">Новости</a></li>
@@ -96,7 +97,7 @@
                 </div>
             </div>
         </div>
-
+        <svg class="flag-ic"><use xlink:href="#flag" /></svg>
     </div>
 </section>
 <main class="bl bl-sm aboutus">
@@ -119,8 +120,8 @@
                 присутствии высококвалифицированного тренера.
             </div>
         </div>
-        <svg class="icon orange"><use xlink:href="#ball" /></svg>
-        <svg class="icon aqua"><use xlink:href="#ball" /></svg>
+        <svg class="ball-ic orange"><use xlink:href="#ball" /></svg>
+        <svg class="ball-ic aqua"><use xlink:href="#ball" /></svg>
     </div>
 </main>
 <section class="bl team bl-info">
@@ -205,18 +206,57 @@
         </div>
     </div>
 </section>
-<div class="bl bl-sm">
+<div class="bl bl-sm bl-slider">
     <div class="container">
         <h2 class="title">Помещения</h2>
         <div class="bl-in">
+            <div class="slider">
+                <div class="slider-wrapper">
+                    <div class="slider-items">
+                        <div class="slider-item">
+                            <img src="#" alt="" class="slider-img">
+                            <div class="slider-text">
+                                <div class="">
+                                    <h3 class="title">Наименование помещения</h3>
+                                    <div>Описание: Площадь - 20кв.м.; Расчитано на 15 детей;</div>
+                                </div>
+                                <div class="slider-indic">
+                                    <span>1</span>/<span>20</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a href="#" class="slider-control slider-control_prev" href="#" role="button"></a>
+                <a href="#" class="slider-control slider-control_next" href="#" role="button"></a>
+            </div>
         </div>
     </div>
 </div>
-<div class="bl">
+<div class="bl bl-sm bl-slider">
     <div class="container">
         <h2 class="title">Территория</h2>
         <div class="bl-in">
-
+            <div class="slider">
+                <div class="slider-wrapper">
+                    <div class="slider-items">
+                        <div class="slider-item">
+                            <img src="#" alt="" class="slider-img">
+                            <div class="slider-text">
+                                <div class="">
+                                    <h3 class="title">Игровая площадка “Грибок”</h3>
+                                    <div>Описание: Площадь - 40кв.м.; Игровой инвентарь: качеля, горка, карусель.</div>
+                                </div>
+                                <div class="slider-indic">
+                                    <span>1</span>/<span>20</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a href="#" class="slider-control slider-control_prev" href="#" role="button"></a>
+                <a href="#" class="slider-control slider-control_next" href="#" role="button"></a>
+            </div>
         </div>
     </div>
 </div>
@@ -295,11 +335,31 @@
         </div>
     </div>
 </div>
-<div class="bl">
+<div class="bl bl-sm contacts">
     <div class="container">
         <h2 class="title">Контакты</h2>
         <div class="bl-in">
-
+            <div class="contacts-map"></div>
+            <address class="contacts-address">
+                <ul>
+                    <li>
+                        <h3 class="title">Адрес:</h3>
+                        <div>г. Алматы, Бостандыкский р-н, ул. Садовая, д. 210 </div>
+                    </li>
+                    <li>
+                        <h3 class="title">Телефон:</h3>
+                        <div>+7 (777) 777 - 77 - 77</div>
+                    </li>
+                    <li>
+                        <h3 class="title">E-mail:</h3>
+                        <div>kindergarden@mail.com</div>
+                    </li>
+                    <li>
+                        <h3 class="title">Web: </h3>
+                        <div>www.kindergarden.com</div>
+                    </li>
+                </ul>
+            </address>
         </div>
     </div>
 </div>
@@ -307,17 +367,18 @@
     <div class="container">
         <h2 class="title">Обратная связь</h2>
         <div class="bl-in">
-
-            <svg class="icon red"><use xlink:href="#ball" /></svg>
-            <svg class="icon violet"><use xlink:href="#ball" /></svg>
-            <svg class="icon yellow"><use xlink:href="#ball" /></svg>
-            <svg class="icon light-blue"><use xlink:href="#ball" /></svg>
-            <svg class="icon pink"><use xlink:href="#ball" /></svg>
-            <svg class="icon green"><use xlink:href="#ball" /></svg>
-            <svg class="icon blue"><use xlink:href="#ball" /></svg>
-            <svg class="icon aqua"><use xlink:href="#ball" /></svg>
         </div>
     </div>
+</div>
+<div>
+    <svg class="ball-ic red"><use xlink:href="#ball" /></svg>
+    <svg class="ball-ic violet"><use xlink:href="#ball" /></svg>
+    <svg class="ball-ic yellow"><use xlink:href="#ball" /></svg>
+    <svg class="ball-ic light-blue"><use xlink:href="#ball" /></svg>
+    <svg class="ball-ic pink"><use xlink:href="#ball" /></svg>
+    <svg class="ball-ic green"><use xlink:href="#ball" /></svg>
+    <svg class="ball-ic blue"><use xlink:href="#ball" /></svg>
+    <svg class="ball-ic aqua"><use xlink:href="#ball" /></svg>
 </div>
 
 <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
@@ -331,6 +392,22 @@
         <path d="M113.422 40.2699L122.655 43.9114C121.945 44.2815 120.188 47.8307 119.398 49.559C119.026 49.5654 118.01 49.4936 116.931 49.1545C115.852 48.8155 114.142 43.0901 113.422 40.2699Z" fill="white"/>
         <path d="M129.801 159.186L125.753 157.914L122.631 158.416L121.379 163.581L129.801 159.186Z"/>
         <path d="M125.753 157.914L122.207 159.765C122.259 162.746 123.395 168.958 127.528 169.96C132.693 171.212 134.505 172.522 133.908 176.782C133.311 181.041 128.128 191.643 135.164 197.559C142.199 203.475 151.97 199.503 156.539 205.015C161.107 210.526 162.534 215.422 162.188 221.242C161.842 227.063 160.224 236.931 161.632 240.709" stroke="#8D8D8D" fill="none"/>
+    </symbol>
+</svg>
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+    <symbol id="flag" viewBox="0 0 68 1120" >
+        <path d="M18.4462 14.5598L56.2608 29.6199L24.3111 54.8383L18.4462 14.5598Z" fill="#FF05E6"/>
+        <path d="M19.4462 591.975L57.2608 607.035L25.3111 632.253L19.4462 591.975Z" fill="#FF05E6"/>
+        <path d="M11.8409 121.908L52.4965 119.94L33.8732 156.133L11.8409 121.908Z" fill="#FFF960"/>
+        <path d="M12.8409 699.323L53.4965 697.354L34.8732 733.547L12.8409 699.323Z" fill="#FFF960"/>
+        <path d="M55.5263 221.601L28.5247 252.059L15.6485 213.446L55.5263 221.601Z" fill="#29AEFA"/>
+        <path d="M56.5263 799.016L29.5247 829.474L16.6485 790.861L56.5263 799.016Z" fill="#29AEFA"/>
+        <path d="M56.7129 317.242L22.337 339.038L20.6495 298.37L56.7129 317.242Z" fill="#06FF20"/>
+        <path d="M57.7129 894.657L23.337 916.453L21.6495 875.784L57.7129 894.657Z" fill="#06FF20"/>
+        <path d="M57.0776 396.788L40.2364 433.844L16.5658 400.731L57.0776 396.788Z" fill="#FF0B0B"/>
+        <path d="M58.0776 974.203L41.2364 1011.26L17.5658 978.146L58.0776 974.203Z" fill="#FF0B0B"/>
+        <path d="M58.66 522.045L17.9568 522.108L38.2532 486.827L58.66 522.045Z" fill="#051EFF"/>
+        <path d="M59.66 1099.46L18.9568 1099.52L39.2532 1064.24L59.66 1099.46Z" fill="#051EFF"/>
     </symbol>
 </svg>
 </body>

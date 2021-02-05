@@ -71,7 +71,7 @@ h3 {
   padding: 0 calc(60em/16) 0 calc(35em/16);
 }
 
-.icon {
+.ball-ic {
   width: 240px;
   height: 330px;
   position: absolute;
@@ -111,6 +111,12 @@ h3 {
 
 .blue {
   fill: #051EFF;
+}
+
+.flag-ic {
+  width: 68px;
+  height: 1120px;
+  position: absolute;
 }
 
 /*# sourceMappingURL=general.css.map */
