@@ -12,7 +12,7 @@ html {
 body {
   font-family: "Comfortaa-Regular", Arial, sans-serif;
   font-size: 1rem;
-  color: red;
+  color: #000000;
   line-height: 1.18;
   margin: 0;
   padding: 0;
@@ -46,7 +46,7 @@ h3 {
 }
 
 .title {
-  color: red;
+  color: #000000;
   font-family: "Comfortaa-Bold", Arial, sans-serif;
   text-align: center;
 }
