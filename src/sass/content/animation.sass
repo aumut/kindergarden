@@ -113,3 +113,12 @@
       stroke: hsla(183, 20%, 30%, 0.3)
       stroke-width: 1px
       d: path("M0,0 C100,100 700,200 800,100")
+
+.rotate
+  animation: rotation 8s infinite linear
+
+@keyframes rotation
+  from
+    transform: rotate(0deg)
+  to
+    transform: rotate(359deg)
