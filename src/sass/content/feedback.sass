@@ -1,14 +1,20 @@
 @import "../general/variables"
 .feedback
+  .container
+    position: relative
   .bl-in
     background-color: transparent
-    padding: 8px 0 95px
+    padding: calc(8em/16) 0 calc(95em/16)
   .row
     display: flex
     justify-content: space-between
+  .ball-ic.blue
+    top: calc(60em/16)
+    left: calc(60em/16)
+    transform: rotate(-50deg) scaleX(-1)
 
 .field-group
-  margin-bottom: 20px
+  margin-bottom: calc(20em/16)
 
   &:last-child
     margin-bottom: 0

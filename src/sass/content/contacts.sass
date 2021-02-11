@@ -1,21 +1,27 @@
 .contacts
+  .container
+    position: relative
   .bl-in
     display: flex
     justify-content: space-between
     padding: 0
     background-color: transparent
   &-map
-    min-width: 615px
+    min-width: calc(615em/16)
     background-color: #8D8D8D
   &-address
-    margin-left: 10px
+    margin-left: calc(10em/16)
     display: flex
     flex-direction: column
-    padding: 0 5px 35px 0
+    padding: 0 calc(5em/16) calc(35em/16) 0
     .title
       text-align: left
-      margin-bottom: 15px
+      margin-bottom: calc(15em/16)
     ul
       list-style: none
     li
-      margin-bottom: 15px
+      margin-bottom: calc(15em/16)
+  .ball-ic.aqua
+    bottom: calc(-186em/16)
+    right: calc(125em/16)
+    transform: rotate(35deg)

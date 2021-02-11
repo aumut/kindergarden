@@ -26,22 +26,18 @@
   padding: calc(30em/20) calc(10em/20);
   color: #033E09;
 }
-.menu .flag-ic {
-  left: -10px;
-  top: 40px;
-}
 
 .logo {
   background-color: transparent;
   width: 100%;
   border: 1px solid #033E09;
-  height: 150px;
+  height: calc(150em/16);
   margin-bottom: calc(30em/16);
   border-radius: 40px;
   color: #033E09;
   font-family: "Comfortaa", sans-serif;
   font-weight: bold;
-  font-size: 30px;
+  font-size: calc(30em/16);
   display: flex;
   align-items: center;
   justify-content: center;

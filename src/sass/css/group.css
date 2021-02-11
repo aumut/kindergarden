@@ -7,16 +7,16 @@
 }
 .group-item {
   width: 33%;
-  margin-bottom: 50px;
+  margin-bottom: calc(50em/16);
 }
 .group-item .title {
-  margin-bottom: 15px;
+  margin-bottom: calc(15em/16);
 }
 .group-info {
   list-style: none;
 }
 .group-info li {
-  margin-bottom: 15px;
+  margin-bottom: calc(15em/16);
 }
 .group-info li:last-child {
   margin-bottom: 0;
@@ -31,15 +31,17 @@
   text-align: left;
 }
 .group .bl-in > .title {
-  margin-bottom: 30px;
+  margin-bottom: calc(30em/16);
 }
-.group .pink {
-  bottom: -70px;
-  left: 65px;
+.group .ball-ic.pink {
+  bottom: calc(-70em/16);
+  left: calc(20em/16);
+  transform: scalex(-1);
 }
-.group .green {
-  top: 20px;
-  right: 150px;
+.group .ball-ic.green {
+  top: calc(20em/16);
+  right: calc(165em/16);
+  transform: rotate(15deg);
 }
 
 /*# sourceMappingURL=group.css.map */

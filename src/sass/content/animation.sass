@@ -1,0 +1,115 @@
+
+.ball
+  display: inline-block
+  transition: transform 0.5s ease
+  z-index: 10
+  animation: balloons 4s ease-in-out infinite
+  transform-origin: bottom center
+
+
+
+.orange .ball
+  animation-duration: 2s
+.aqua .ball
+  animation-duration: 3.5s
+.red .ball
+  animation-duration: 3s
+.violet .ball
+  animation-duration: 4.5s
+.yellow .ball
+  animation-duration: 2.5s
+.light-blue .ball
+  animation-duration: 4s
+.pink .ball
+  animation-duration: 3s
+.green .ball
+  animation-duration: 3.5s
+.blue .ball
+  animation-duration: 2s
+
+
+
+@keyframes balloons
+  0%,100%
+    transform: translateY(0) rotate(-4deg)
+
+  50%
+    transform: translateY(-25px) rotate(4deg)
+
+.flag-wrap
+  width: calc(800em/16)
+  height: calc(100em/16)
+  border: 0px dotted cyan
+  position: relative
+  transform-style: preserve-3d
+  display: flex
+  justify-content: space-between
+  position: absolute
+  display: none
+  &-left
+    top: calc(11em/16)
+    left: calc(-77em/16)
+    transform: scale(0.8) rotate(-30deg)
+  &-right
+    top: calc(-24em/16)
+    right: calc(-53em/16)
+    transform: scale(0.8) rotate(5deg)
+
+.flag
+  display: flex
+  height: calc(70em/16)
+  width: calc(45em/16)
+  //background: hsl(var(--hue, 43), 90%, 55%)
+  //color: hsl(43, 90%, var(--text, 5%))
+  clip-path: polygon(0% 0%, 100% 0%, 50% 100%)
+  transform-origin: 50% 0%
+  justify-content: center
+  align-items: center
+  padding-bottom: 1rem
+
+.string
+  display: none
+
+@supports (offset-path: path("M0,0 C100,100 700,200 800,100"))
+  .flag-wrap
+    height: calc(230em/16)
+
+    &:nth-of-type(even)
+      --transform: rotate(0deg)
+
+    &:nth-of-type(2)
+      --transform: scaleX(-1) rotate(-8deg)
+
+    &:nth-of-type(1)
+      --transform: rotate(-4deg)
+
+  .flag:not(.string)
+    position: absolute
+    offset-anchor: 50% 0%
+    offset-path: path("M0,0 C100,100 700,200 800,100")
+
+@supports (d: path("M0,0 C100,100 700,200 800,100"))
+  .string
+    position: absolute
+    width: calc(800em/16)
+    top: 0
+    left: 0
+    height: calc(230em/16)
+    display: block
+    background: transparent
+    clip-path: none
+
+    svg
+      position: absolute
+      width: calc(800em/16)
+      top: 0
+      left: 0
+      height: calc(230em/16)
+      display: block
+      background: transparent
+      clip-path: none
+
+    path
+      stroke: hsla(183, 20%, 30%, 0.3)
+      stroke-width: 1px
+      d: path("M0,0 C100,100 700,200 800,100")

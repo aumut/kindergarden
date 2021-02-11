@@ -19,6 +19,11 @@ body {
   height: 100vh;
   background-color: #FFFFFF;
 }
+@media screen and (max-width: 1366px) {
+  body {
+    font-size: 11px;
+  }
+}
 
 a {
   display: inline-block;
@@ -72,51 +77,174 @@ h3 {
 }
 
 .ball-ic {
-  width: 240px;
-  height: 330px;
+  width: calc(240em/16);
+  height: calc(330em/16);
   position: absolute;
 }
+.ball-ic .ball {
+  width: 100%;
+  height: 100%;
+}
 
-.orange {
+.orange .ball {
   fill: #FF710B;
 }
 
-.aqua {
+.aqua .ball {
   fill: #07EEFD;
 }
 
-.red {
-  fill: #F90505;
+.red .ball {
+  fill: #FF0B0B;
 }
 
-.violet {
+.violet .ball {
   fill: #B10BFF;
 }
 
-.yellow {
+.yellow .ball {
   fill: #FFF506;
 }
 
-.light-blue {
+.light-blue .ball {
   fill: #29AEFA;
 }
 
-.pink {
+.pink .ball {
   fill: #FF05E6;
 }
 
-.green {
+.green .ball {
   fill: #07B719;
 }
 
-.blue {
+.blue .ball {
   fill: #051EFF;
 }
 
-.flag-ic {
-  width: 68px;
-  height: 1120px;
+.flag-wrap .red {
+  background-color: #FF0B0B;
+}
+.flag-wrap .orange {
+  background-color: #FF710B;
+}
+.flag-wrap .yellow {
+  background-color: #FFF506;
+}
+.flag-wrap .light-green {
+  background-color: #06FF20;
+}
+.flag-wrap .white {
+  background-color: #FFFFFF;
+}
+.flag-wrap .blue {
+  background-color: #051EFF;
+}
+.flag-wrap .violet {
+  background-color: #B10BFF;
+}
+.flag-wrap .aqua {
+  background-color: #07EEFD;
+}
+
+.flag {
   position: absolute;
+  fill: none;
+}
+.flag-left {
+  width: calc(459em/16);
+  height: calc(177em/16);
+}
+.flag-right {
+  width: calc(747em/16);
+  height: calc(144em/16);
+}
+
+.triangle-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: calc(47em/16);
+  position: fixed;
+  z-index: 1;
+}
+.triangle-wrap-left {
+  left: 0px;
+  top: calc(40em/16);
+}
+.triangle-wrap-right {
+  top: calc(70em/16);
+  right: calc(10em/16);
+}
+.triangle-wrap .orange {
+  fill: #FF710B;
+}
+.triangle-wrap .aqua {
+  fill: #07EEFD;
+}
+.triangle-wrap .red {
+  fill: #FF0B0B;
+  transform: rotate(100deg);
+}
+.triangle-wrap .violet {
+  fill: #B10BFF;
+}
+.triangle-wrap .yellow {
+  fill: #FFF506;
+  transform: rotate(100deg);
+}
+.triangle-wrap .light-blue {
+  fill: #29AEFA;
+  transform: rotate(-13deg);
+}
+.triangle-wrap .pink {
+  fill: #FF05E6;
+  transform: rotate(5deg);
+}
+.triangle-wrap .green {
+  fill: #07B719;
+}
+.triangle-wrap .blue {
+  fill: #051EFF;
+  transform: rotate(40deg);
+}
+.triangle-wrap .light-blue {
+  fill: #29AEFA;
+}
+.triangle-wrap .white {
+  fill: #FFFFFF;
+  transform: rotate(5deg);
+}
+.triangle-wrap .light-green {
+  fill: #06FF20;
+  transform: rotate(5deg);
+}
+
+.triangle {
+  width: calc(47em/16);
+  height: calc(54em/16);
+  margin-bottom: calc(50em/16);
+}
+
+.scrolled {
+  overflow-y: auto;
+}
+
+.scrolled::-webkit-scrollbar {
+  width: calc(15em/16);
+  height: calc(20em/16);
+  background-color: #B4FFB7;
+  border-radius: calc(20em/16);
+}
+
+.scrolled::-webkit-scrollbar-thumb {
+  background-color: #033E09;
+  border-radius: calc(20em/16);
+}
+
+.scrolled {
+  scrollbar-color: #033E09 #B4FFB7;
+  scrollbar-width: thin;
 }
 
 /*# sourceMappingURL=general.css.map */

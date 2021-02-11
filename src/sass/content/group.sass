@@ -7,13 +7,13 @@
     flex-wrap: wrap
   &-item
     width: 33%
-    margin-bottom: 50px
+    margin-bottom: calc(50em/16)
     .title
-      margin-bottom: 15px
+      margin-bottom: calc(15em/16)
   &-info
     list-style: none
     li
-      margin-bottom: 15px
+      margin-bottom: calc(15em/16)
       &:last-child
         margin-bottom: 0
   &-label
@@ -25,13 +25,15 @@
     .title
       text-align: left
     &>.title
-      margin-bottom: 30px
+      margin-bottom: calc(30em/16)
 
-  .pink
-    bottom: -70px
-    left: 65px
-  .green
-    top: 20px
-    right: 150px
+  .ball-ic.pink
+    bottom: calc(-70em/16)
+    left: calc(20em/16)
+    transform: scalex(-1)
+  .ball-ic.green
+    top: calc(20em/16)
+    right: calc(165em/16)
+    transform: rotate(15deg)
 
 

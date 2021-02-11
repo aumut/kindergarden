@@ -1,3 +1,6 @@
+.contacts .container {
+  position: relative;
+}
 .contacts .bl-in {
   display: flex;
   justify-content: space-between;
@@ -5,24 +8,29 @@
   background-color: transparent;
 }
 .contacts-map {
-  min-width: 615px;
+  min-width: calc(615em/16);
   background-color: #8D8D8D;
 }
 .contacts-address {
-  margin-left: 10px;
+  margin-left: calc(10em/16);
   display: flex;
   flex-direction: column;
-  padding: 0 5px 35px 0;
+  padding: 0 calc(5em/16) calc(35em/16) 0;
 }
 .contacts-address .title {
   text-align: left;
-  margin-bottom: 15px;
+  margin-bottom: calc(15em/16);
 }
 .contacts-address ul {
   list-style: none;
 }
 .contacts-address li {
-  margin-bottom: 15px;
+  margin-bottom: calc(15em/16);
+}
+.contacts .ball-ic.aqua {
+  bottom: calc(-186em/16);
+  right: calc(125em/16);
+  transform: rotate(35deg);
 }
 
 /*# sourceMappingURL=contacts.css.map */

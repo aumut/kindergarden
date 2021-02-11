@@ -1,4 +1,5 @@
 @import "variables"
+@import "../mixins/mixins"
 *
   &:focus, &:active
     outline: none !important
@@ -18,6 +19,8 @@ body
   padding: 0
   height: 100vh
   background-color: $main_bg
+  +laptop-down1
+    font-size: 11px
 
 
 a
@@ -66,30 +69,130 @@ h3
   //background-color: #EDEDED
 
 .ball-ic
-  width: 240px
-  height: 330px
+  width: calc(240em/16)
+  height: calc(330em/16)
   position: absolute
+  .ball
+    width: 100%
+    height: 100%
 
-.orange
-  fill: #FF710B
-.aqua
-  fill: #07EEFD
-.red
-  fill: #F90505
-.violet
-  fill: #B10BFF
-.yellow
-  fill: #FFF506
-.light-blue
-  fill: #29AEFA
-.pink
+.orange .ball
+  fill: $orange
+.aqua .ball
+  fill: $aqua
+.red .ball
+  fill: $red
+.violet .ball
+  fill: $violet
+.yellow .ball
+  fill: $yellow
+.light-blue .ball
+  fill: $light-blue
+.pink .ball
   fill: #FF05E6
-.green
-  fill: #07B719
-.blue
-  fill: #051EFF
+.green .ball
+  fill: $green
+.blue .ball
+  fill: $blue
 
-.flag-ic
-  width: 68px
-  height: 1120px
+.flag-wrap
+  .red
+    background-color: $red
+  .orange
+    background-color: $orange
+  .yellow
+    background-color: $yellow
+  .light-green
+    background-color: $lightgreen
+  .white
+    background-color: $white
+  .blue
+    background-color: $blue
+  .violet
+    background-color: $violet
+  .aqua
+    background-color: $aqua
+
+
+
+.flag
   position: absolute
+  fill: none
+  &-left
+    width: calc(459em/16)
+    height: calc(177em/16)
+
+  &-right
+    width: calc(747em/16)
+    height: calc(144em/16)
+
+.triangle-wrap
+  display: flex
+  flex-direction: column
+  align-items: center
+  width: calc(47em/16)
+  position: fixed
+  z-index: 1
+
+  &-left
+    left: 0px
+    top: calc(40em/16)
+  &-right
+    top: calc(70em/16)
+    right: calc(10em/16)
+  .orange
+    fill: $orange
+  .aqua
+    fill: $aqua
+  .red
+    fill: $red
+    transform: rotate(100deg)
+  .violet
+    fill: $violet
+  .yellow
+    fill: $yellow
+    transform: rotate(100deg)
+  .light-blue
+    fill: $light-blue
+    transform: rotate(-13deg)
+  .pink
+    fill: #FF05E6
+    transform: rotate(5deg)
+  .green
+    fill: $green
+  .blue
+    fill: $blue
+    transform: rotate(40deg)
+  .light-blue
+    fill: $light-blue
+  .white
+    fill: $white
+    transform: rotate(5deg)
+  .light-green
+    fill: $lightgreen
+    transform: rotate(5deg)
+
+
+.triangle
+  width: calc(47em/16)
+  height: calc(54em/16)
+  margin-bottom: calc(50em/16)
+
+
+.scrolled
+  overflow-y: auto
+
+.scrolled::-webkit-scrollbar
+  width: calc(15em/16)
+  height: calc(20em/16)
+  background-color: $themecolor
+  border-radius: calc(20em/16)
+
+.scrolled::-webkit-scrollbar-thumb
+  background-color: $menucolor
+  border-radius: calc(20em/16)
+
+
+.scrolled
+  scrollbar-color: $menucolor $themecolor
+  scrollbar-width: thin

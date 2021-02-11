@@ -16,13 +16,15 @@
 .aboutus .container {
   position: relative;
 }
-.aboutus .orange {
-  bottom: -40px;
-  left: 15px;
+.aboutus .ball-ic.orange {
+  bottom: calc(-40em/16);
+  left: 0;
+  transform: rotate(-40deg) scaleX(-1);
 }
-.aboutus .aqua {
-  top: -40px;
-  right: 40px;
+.aboutus .ball-ic.aqua {
+  top: calc(-40em/16);
+  right: calc(120em/16);
+  transform: rotate(45deg);
 }
 
 /*# sourceMappingURL=aboutus.css.map */
