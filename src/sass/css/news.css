@@ -40,11 +40,11 @@
   margin-bottom: calc(15em/16);
 }
 
-.news {
+.bg-head {
   position: relative;
   padding-top: calc(270em/16);
 }
-.news:before {
+.bg-head:before {
   content: "";
   position: absolute;
   top: 0;
@@ -57,22 +57,22 @@
   background-repeat: no-repeat;
   background-size: cover;
 }
-.news .ball-ic.red {
+.bg-head .ball-ic.red {
   top: calc(100em/16);
   left: calc(195em/16);
   transform: scale(0.8) rotate(-30deg) scalex(-1);
 }
-.news .ball-ic.green {
+.bg-head .ball-ic.green {
   top: calc(5em/16);
   left: calc(480em/16);
   transform: scale(0.8) rotate(-30deg) scaleX(-1);
 }
-.news .ball-ic.yellow {
+.bg-head .ball-ic.yellow {
   top: calc(40em/16);
   right: calc(371em/16);
   transform: scale(0.8) rotate(30deg);
 }
-.news .ball-ic.violet {
+.bg-head .ball-ic.violet {
   top: calc(80em/16);
   right: calc(75em/16);
   transform: scale(0.8) rotate(30deg);

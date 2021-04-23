@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,OAAO;EACL,SAAS,EAAE,2BAA2B;;;;;IAIpC,SAAS,EAAE,YAAY;;;IAEvB,SAAS,EAAE,cAAc",
+"sources": ["../content/triangle_anim.sass"],
+"names": [],
+"file": "triangle_anim.css"
+}
