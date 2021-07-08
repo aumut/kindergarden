@@ -126,11 +126,21 @@
 .rotate
   animation: rotation 8s infinite linear
 
+.shift
+  animation: shift 2s infinite linear
+
 @keyframes rotation
   from
     transform: rotate(0deg)
   to
     transform: rotate(359deg)
+
+@keyframes shift
+  0%,100%
+    transform: rotate(0deg)
+  50%
+    transform: rotate(30deg)
+
 
 .n2-ss-widget
   background-color: #B4FFB7
