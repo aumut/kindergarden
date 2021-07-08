@@ -1,26 +1,28 @@
-@import "variables"
-@import "../mixins/mixins"
+/* GENERAL */
+*
+  box-sizing: border-box
+  &:focus, &:active
+    outline: none !important
+
 *
   &:focus, &:active
     outline: none !important
   box-sizing: border-box
 
 html
-  //overflow: hidden
-  font-size: $fontSize_body
+  scroll-behavior: smooth
 
 body
   font:
-    family: $font_Comfortaa_Regular
-    size: 1rem
-  color: $main_font
-  line-height: $lineHeight_body
+    family: $ff_ComfortaaRegular
+    weight: $fw_body
+  line-height: $lh_body
+  +adaptiv-value("font-size", $fs_body, $fs_body_mob, 2)
+  color: $fc_body
   margin: 0
   padding: 0
   height: 100vh
-  background-color: $main_bg
-  +laptop-down1
-    font-size: 11px
+  background-color: $bg_body
 
 
 a
@@ -35,43 +37,137 @@ h1, h2, h3, h4, h5, p, ul, ol
   margin: 0
   padding: 0
 
-h2
-  font-size: $fontSize_h2
-  line-height: $lineHeight_h2
+h1
+  +adaptiv-value("font-size", $fs_h1, $fs_h1_mob, 2)
+  line-height: $lh_h1
+  font-weight: $fw_h1
+  &.title
+    color: $c_h1
+    text-align: right
+  &+.subtitle
+    color: $blue1
+    text-align: right
+    +adaptiv-value("font-size", 50, 25, 2)
+    line-height: 1
+    font-family: $ff_Caveat-Regular
+    margin-top: -5px
+    +tablet-down
+      margin-top: 0
 
+
+h2
+  +adaptiv-value("font-size", $fs_h2, $fs_h2_mob, 2)
+  line-height: $lh_h2
+  font-weight: $fw_h2
+  &.title
+    color: $menucolor
 
 h3
-  font-size: $fontSize_h3
-  line-height: $lineHeight_h3
+  +adaptiv-value("font-size", $fs_h3, $fs_h3_mob, 2)
+  line-height: $lh_h3
+  font-weight: $fw_h3
+  &.title
+    font-family: $ff_ComfortaaRegular
 
+h4
+  +adaptiv-value("font-size", $fs_body, $fs_body_mob, 2)
+  line-height: $lh_body
+  font-weight: $fw_body
+  &.title
+    font-family: $ff_ComfortaaRegular
 
 .title
-  color: $main_font
-  font-family: $font_Comfortaa_Bold
+  color: $fc_body
+  font-family: $ff_ComfortaaBold
   text-align: center
 
 .bl
-  width: calc(100% - #{$nav_w})
-  margin-left: #{$nav_w}
-  margin-bottom: calc(50em/16)
+  width: calc( calc(100vw - 250px) - calc(#{$w_menu} - #{$w_menu_mob}) * (calc(100vw - 320px) / 1600) )
+  //+adaptiv-value("width", 1670, 60, 2)
+  +adaptiv-value("margin-left", $w_menu, $w_menu_mob, 2)
+  +adaptiv-value("margin-top", 50, 25, 2)
+  //+adaptiv-value("padding-top", 30, 15, 2)
+
+  +phone-down
+    width: 100%
+    margin-left: 0
+
   &-sm
     .bl-in
-      width: 57%
+      width: $w_container
       background-color: $themecolor
       margin: 0 auto
-      padding: calc(35em/16) calc(50em/16)
+      //padding: calc(35em/16) calc(50em/16)
+      //+adaptiv-value("padding-top", 35, 10, 2)
+      //+adaptiv-value("padding-bottom", 35, 10, 2)
+      //+adaptiv-value("padding-left", 50, 10, 2)
+      //+adaptiv-value("padding-right", 50, 10, 2)
+      //+laptop-down
+        width: 70%
+      +tablet-down
+        width: $w_container_mob
+      +phone-down
+        width: 100%
+
+    &.feedback
+      .bl-in
+        +phone-down
+          padding-left: 0
+          padding-right: 0
+
+    //&.aboutus, &.group
+      .container
+        +phone-down
+          padding: 0
+      h2.title
+        +phone-down
+          background-color: $themecolor
+          padding-bottom: 0 !important
+          padding-top: 10px
+
+  &-accent
+    .container
+      background-color: $themecolor
+      +adaptiv-value("padding-bottom", 50, 10, 2)
+      +adaptiv-value("padding-top", 30, 10, 2)
+      +tablet-down
+        padding-left: 10px
+        padding-right: 10px
+      +phone-down
+        margin-left: 0px
+        margin-right: 0px
+
+    .bl-in
+      padding: 0
+
+  &-in.scrolled
+    +phone-down
+      margin-right: -10px
+
   h2.title
-    margin-bottom: calc(8em/16)
+    +adaptiv-value("padding-bottom", 30, 10, 2)
+
+  &.rooms
+    h2.title
+      +phone-down
+        padding-bottom: 5px
+
 
 .container
-  width: 100%
-  padding: 0 calc(60em/16) 0 calc(35em/16)
-  //background-color: #EDEDED
+  +adaptiv-value("margin-left", 20, 10, 2)
+  +adaptiv-value("margin-right", 60, 10, 2)
+
 
 .ball-ic
-  width: calc(240em/16)
-  height: calc(330em/16)
+  +adaptiv-value("width", 240, 45, 2)
+  +adaptiv-value("height", 330, 75, 2)
   position: absolute
+  pointer-events: none
+  +tablet-down
+    display: none
+  +phone-down
+    display: none
+
   .ball
     width: 100%
     height: 100%
@@ -96,6 +192,7 @@ h3
   fill: $blue
 
 .flag-wrap
+  display: none
   .red
     background-color: $red
   .orange
@@ -131,15 +228,20 @@ h3
   flex-direction: column
   align-items: center
   width: calc(47em/16)
+  +adaptiv-value("width", 47, 19, 2)
   position: fixed
   z-index: 1
+  +tablet-down
+    display: none
+  +phone-down
+    display: none
 
   &-left
-    left: 0px
-    top: calc(40em/16)
+    left: 0
+    top: 3.7vh
   &-right
-    top: calc(70em/16)
-    right: calc(10em/16)
+    +adaptiv-value("right", 10, 4, 2)
+    top: 6.4815vh
   .orange
     fill: $orange
   .aqua
@@ -174,25 +276,18 @@ h3
 
 
 .triangle
-  width: calc(47em/16)
-  height: calc(54em/16)
-  margin-bottom: calc(50em/16)
+  +adaptiv-value("width", 47, 24, 2)
+  +adaptiv-value("height", 54, 27, 2)
+  margin-bottom: 4.629vh
 
 
-.scrolled
-  overflow-y: auto
 
-.scrolled::-webkit-scrollbar
-  width: calc(15em/16)
-  height: calc(20em/16)
-  background-color: $themecolor
-  border-radius: calc(20em/16)
+.bl .hide-text-wrap
+  .btn--more
+    position: static
+    bottom: unset
+    left: unset
+    height: unset
+    background-image: none
+    margin: 0 auto
 
-.scrolled::-webkit-scrollbar-thumb
-  background-color: $menucolor
-  border-radius: calc(20em/16)
-
-
-.scrolled
-  scrollbar-color: $menucolor $themecolor
-  scrollbar-width: thin

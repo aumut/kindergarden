@@ -51,8 +51,10 @@
   }
 }
 .flag-wrap {
-  width: calc(800em/16);
-  height: calc(100em/16);
+  width: 800px;
+  width: calc(320px + 480 * ((100vw - 320px) / 1600));
+  height: 100px;
+  height: calc(40px + 60 * ((100vw - 320px) / 1600));
   border: 0px dotted cyan;
   position: relative;
   transform-style: preserve-3d;
@@ -61,14 +63,25 @@
   position: absolute;
   display: none;
 }
+@media screen and (max-width: 1024px) {
+  .flag-wrap {
+    display: none;
+  }
+}
 .flag-wrap-left {
   top: calc(11em/16);
   left: calc(-77em/16);
+  top: 11px;
+  top: calc(4.4px + 6.6 * ((100vw - 320px) / 1600));
+  left: -77px;
+  left: calc(-30.8px + -46.2 * ((100vw - 320px) / 1600));
   transform: scale(0.8) rotate(-30deg);
 }
 .flag-wrap-right {
-  top: calc(-24em/16);
-  right: calc(-53em/16);
+  top: -24px;
+  top: calc(9.6px + -33.6 * ((100vw - 320px) / 1600));
+  right: -53px;
+  right: calc(-21.2px + -31.8 * ((100vw - 320px) / 1600));
   transform: scale(0.8) rotate(5deg);
 }
 
@@ -76,6 +89,10 @@
   display: flex;
   height: calc(70em/16);
   width: calc(45em/16);
+  width: 45px;
+  width: calc(18px + 27 * ((100vw - 320px) / 1600));
+  height: 70px;
+  height: calc(28px + 42 * ((100vw - 320px) / 1600));
   clip-path: polygon(0% 0%, 100% 0%, 50% 100%);
   transform-origin: 50% 0%;
   justify-content: center;
@@ -83,13 +100,11 @@
   padding-bottom: 1rem;
 }
 
-.string {
-  display: none;
-}
-
 @supports (offset-path: path("M0,0 C100,100 700,200 800,100")) {
   .flag-wrap {
     height: calc(230em/16);
+    height: 230px;
+    height: calc(92px + 138 * ((100vw - 320px) / 1600));
   }
   .flag-wrap:nth-of-type(even) {
     --transform: rotate(0deg);
@@ -110,20 +125,24 @@
 @supports (d: path("M0,0 C100,100 700,200 800,100")) {
   .string {
     position: absolute;
-    width: calc(800em/16);
+    width: 800px;
+    width: calc(320px + 480 * ((100vw - 320px) / 1600));
     top: 0;
     left: 0;
-    height: calc(230em/16);
+    height: 230px;
+    height: calc(92px + 138 * ((100vw - 320px) / 1600));
     display: block;
     background: transparent;
     clip-path: none;
   }
   .string svg {
     position: absolute;
-    width: calc(800em/16);
+    width: 800px;
+    width: calc(320px + 480 * ((100vw - 320px) / 1600));
     top: 0;
     left: 0;
-    height: calc(230em/16);
+    height: 230px;
+    height: calc(92px + 138 * ((100vw - 320px) / 1600));
     display: block;
     background: transparent;
     clip-path: none;
@@ -145,6 +164,49 @@
   to {
     transform: rotate(359deg);
   }
+}
+.n2-ss-widget {
+  background-color: #B4FFB7;
+}
+
+.nextend-arrow {
+  position: absolute;
+  border-radius: 50%;
+  background-color: #b4ffb7;
+  width: calc( 30px + 50 * ((100vw - 320px) / 1600) ) !important;
+  height: calc( 30px + 50 * ((100vw - 320px) / 1600) ) !important;
+  top: 50% !important;
+  margin-top: 0px;
+  margin-top: calc(-13px + 13 * ((100vw - 320px) / 1600));
+}
+@media screen and (max-width: 576px) {
+  .nextend-arrow {
+    background-color: rgba(180, 255, 183, 0.63);
+  }
+}
+
+.nextend-arrow-previous {
+  left: calc( 0px - 95 * ((100vw - 320px) / 1600) ) !important;
+}
+
+.nextend-arrow-next {
+  right: calc( 0px - 95 * ((100vw - 320px) / 1600) ) !important;
+}
+
+.slider-control {
+  position: absolute;
+  border-radius: 50%;
+  background-color: #B4FFB7;
+  background-image: url(../images/arrow-left.svg);
+  background-repeat: no-repeat;
+  background-size: 40%;
+  background-position: center;
+  width: 80px;
+  width: calc(40px + 40 * ((100vw - 320px) / 1600));
+  height: 80px;
+  height: calc(40px + 40 * ((100vw - 320px) / 1600));
+  top: 50%;
+  margin-top: 0;
 }
 
 /*# sourceMappingURL=animation.css.map */

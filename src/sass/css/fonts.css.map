@@ -1,7 +1,7 @@
 {
 "version": 3,
-"mappings": "WACE,WAAW,CAAE,gBAAgB,CAC7B,UAAU,CAAE,MAAM,CAClB,WAAW,CAAE,GAAG,CAChB,GAAG,CAAE,iOAAqO,YAG1O,WAAW,CAAE,mBAAmB,CAChC,UAAU,CAAE,MAAM,CAClB,WAAW,CAAE,GAAG,CAChB,GAAG,CAAE,gPAAoP",
-"sources": ["../fonts/fonts.sass"],
+"mappings": "",
+"sources": [],
 "names": [],
 "file": "fonts.css"
 }

@@ -1,10 +1,11 @@
+/* ROOMS */
 .rooms
   .container
     position: relative
   .ball-ic.red
-    top: calc(-40em/16)
-    left: calc(10em/16)
     transform: scaleX(-1)
+    +adaptiv-value("top", -40, -16, 2)
+    +adaptiv-value("left", 10, 4, 2)
   .ball-ic.violet
-    bottom: calc(-35em/16)
-    right: calc(70em/16)
+    +adaptiv-value("top", 270, 108, 2)
+    +adaptiv-value("right", 70, 28, 2)

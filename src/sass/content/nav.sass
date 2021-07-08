@@ -1,43 +1,106 @@
-@import "../general/variables"
+/* NAV */
 .menu
   background-color: $themecolor
-  padding: calc(20em/16) calc(20em/16) 0 calc(60em/16)
-  width: $nav_w
-  height: 100%
+  padding-bottom: 0
+  height: 100vh
   position: fixed
   top: 0
   left: 0
+  +adaptiv-value("width", $w_menu, $w_menu_mob, 2)
+  +adaptiv-value("min-width", $w_menu, $w_menu_mob, 2)
+  +adaptiv-value("padding-top", 20, 10, 2)
+  +adaptiv-value("padding-right", 20, 10, 2)
+  +adaptiv-value("padding-left", 80, 30, 2)
+  +phone-down
+    z-index: 1
+    width: 100%
+    display: none
+
   ul
     display: flex
     flex-direction: column
-    font-size: $fontSize_menu
-    line-height: $lineHeight_menu
+    line-height: $lh_menu
+    +adaptiv-value("font-size", $fs_menu, $fs_menu_mob, 2)
+
   li
     display: inline-block
     text-align: center
-    margin-bottom: 1em
     border-bottom: 2px solid transparent
-    &:hover
-      border-bottom-color: #033E09
-    a
-      padding: calc(30em/20) calc(10em/20)
-      color: $menucolor
-  //.triangle-wrap
-    left: 0px
-    top: 40px
+    margin-bottom: 4vh
 
+    +phone-down
+      width: 88%
+      margin: 0 auto
+
+    &:hover
+      border-bottom-color: $menucolor
+
+    a
+      display: inline-block
+      width: 100%
+      color: $menucolor
+      +adaptiv-value("padding-top", 30, 16, 2)
+      +adaptiv-value("padding-bottom", 30, 15, 2)
+      +adaptiv-value("padding-left", 10, 5, 2)
+      +adaptiv-value("padding-right", 10, 5, 2)
+      padding-top: 0.78vh
+      padding-bottom: 0.78vh
+      +phone-down
+        padding-top: 16px
+        padding-bottom: 15px
+
+  &.active
+    +phone-down
+      display: block
+    & + .bl-top .menu-btn
+      display: none
 
 .logo
   background-color: transparent
   width: 100%
-  border: 1px solid $menucolor
-  height: calc(150em/16)
-  margin-bottom: calc(30em/16)
-  border-radius: 40px
+  +adaptiv-value("border-radius", 40, 20, 2)
   color: $menucolor
-  font-family: 'Comfortaa', sans-serif
-  font-weight: bold
-  font-size: calc(30em/16)
+  font-family: $ff_ComfortaaBold
   display: flex
   align-items: center
   justify-content: center
+  +adaptiv-value("font-size", $fs_logo, $fs_logo_mob, 2)
+  margin-bottom: 6.78vh
+  height: 9vh
+  +phone-down
+    margin-bottom: 38px
+    height: 80px
+
+.menu-btn
+  color: $menucolor
+  background: $themecolor
+  border-radius: 5px
+  width: $w_menuBtn
+  height: $h_menuBtn
+  background:
+    image: url("../images/menu.svg")
+    repeat: no-repeat
+    size: 60%
+    position: center
+  position: absolute
+  right: $r_menuBtn
+  top: $t_menuBtn
+  display: none
+  +phone-down
+    display: inline-block
+    position: fixed
+    z-index: 10
+
+.close-btn
+  display: none
+  width: $w_closeBtn
+  height: $h_closeBtn
+  position: absolute
+  right: 0
+  top: 0
+  background:
+    color: transparent
+    image: url("../images/close.svg")
+    size: cover
+  +phone-down
+    display: inline-block

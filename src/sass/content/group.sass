@@ -1,39 +1,51 @@
-@import "../general/variables"
+/* GROUP */
 .group
   .container
     position: relative
   &-wrap
-    display: flex
-    flex-wrap: wrap
+    display: grid
+    grid-template-columns: repeat(3, 1fr)
+    gap: 35px 30px
+    +adaptiv-value("grid-column-gap", 30, 10, 2)
+    +adaptiv-value("grid-row-gap", 35, 10, 2)
+    +tablet-down
+      grid-template-columns: auto
+      grid-column-gap: 0
+
+
   &-item
-    width: 33%
-    margin-bottom: calc(50em/16)
+    //+adaptiv-value("margin-bottom", 50, 17, 2)
+    &:last-child
+      grid-column: span 2
+      +tablet-down
+        grid-column: auto
     .title
-      margin-bottom: calc(15em/16)
+      +adaptiv-value("margin-bottom", 25, 5, 2)
   &-info
     list-style: none
+    +adaptiv-value("font-size", 16, 12, 2)
     li
-      margin-bottom: calc(15em/16)
+      +adaptiv-value("margin-bottom", 20, 5, 2)
       &:last-child
         margin-bottom: 0
   &-label
-    font-family: $font_Comfortaa_Bold
+    font-family: $ff_ComfortaaBold
 
 
-  .bl-in
-    padding-bottom: 0
-    .title
-      text-align: left
-    &>.title
-      margin-bottom: calc(30em/16)
+  h4.title
+    text-align: left
+    +adaptiv-value("margin-bottom", 30, 13, 2)
+
+  .group-item-title
+    +adaptiv-value("margin-bottom", 20, 10, 2)
 
   .ball-ic.pink
-    bottom: calc(-70em/16)
-    left: calc(20em/16)
     transform: scalex(-1)
+    +adaptiv-value("bottom", -70, -28, 2)
+    +adaptiv-value("left", 20, 8, 2)
   .ball-ic.green
-    top: calc(20em/16)
-    right: calc(165em/16)
     transform: rotate(15deg)
+    +adaptiv-value("top", 20, 8, 2)
+    +adaptiv-value("right", 165, 66, 2)
 
 

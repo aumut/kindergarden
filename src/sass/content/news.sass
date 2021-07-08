@@ -1,27 +1,68 @@
-@import "../general/variables"
+/* NEWS */
+
 .bl-info
   .bl-in
     display: flex
     flex-wrap: wrap
-    justify-content: space-between
-    padding-right: calc(20em/16)
-    height: calc(450em/16)
-    overflow-y: scroll
+    +adaptiv-value("column-gap", 20, 15, 2)
+    +adaptiv-value("row-gap", 25, 15, 2)
+    //+adaptiv-value("height", 450, 275, 2)
+    +adaptiv-value("margin-bottom", 30, 10, 2)
+    overflow: hidden
+
+    +laptop-down
+      flex-direction: column
+      flex-wrap: nowrap
+
+    &.excerpt
+      +adaptiv-value("height", 450, 275, 2)
+
   &-item
     display: flex
-    width: 49%
-    margin-bottom: calc(30em/16)
+    width: 48.7%
+    //+adaptiv-value("margin-bottom", 25, 35, 2)
+    +laptop-down
+      width: 100%
+
   &-descr
     display: flex
     flex-direction: column
+    //padding-top: 10px
+    position: relative
+    +phone-down
+      padding-top: 0
   &-img
-    min-width: 49%
-    height: calc(250em/16)
+    flex: 0 0 38.3%
     background-color: grey
-    margin-right: calc(10em/16)
+    +adaptiv-value("margin-right", 25, 5, 2)
+    //margin-top: 10px
+    overflow: hidden
+    +phone-down
+      flex: 0 0 40%
+      height: calc( 85px + 50 * (calc(100vw - 320px) / 256) )
+    & > a
+      display: block
+      position: relative
+      width: 100%
+      height: 100%
+    img
+      display: block
+      object-fit: cover
+      width: 100%
+      height: 100%
+      position: absolute
+      top: 0
+      left: 0
   &-detail
     align-self: flex-end
     color: $grey
+    +adaptiv-value("margin-top", 0, 5, 2)
+    display: flex
+    justify-content: flex-end
+    //position: absolute
+    //bottom: -3px
+    //+adaptiv-value("bottom", -3, -18, 2)
+    //right: 0
   &-date
     color: $grey
 
@@ -29,13 +70,21 @@
 .bl-info-descr
   .title
     text-align: left
-    margin-bottom: calc(15em/18)
+    +adaptiv-value("margin-bottom", 10, 5, 2)
   .bl-info-date
-    margin-bottom: calc(15em/16)
+    +adaptiv-value("margin-bottom", 8, 5, 2)
   .bl-info-text
-    margin-bottom: calc(15em/16)
+    +adaptiv-value("margin-bottom", 20, 0, 2)
 
-.bg-head
+
+.news
+  .bl-info-descr
+    +adaptiv-value("font-size", 16, 12, 2)
+    +adaptiv-value("line-height", 19, 14, 2)
+  //.container
+    +adaptiv-value("padding-bottom", 30, 10, 2)
+
+//.bg-head
   position: relative
   padding-top: calc(270em/16)
   &:before
@@ -52,20 +101,130 @@
       repeat: no-repeat
       size: cover
   .ball-ic.red
-    top: calc(100em/16)
-    left: calc(195em/16)
+    //top: calc(100em/16)
+    //left: calc(195em/16)
+    +adaptiv-value("top", 100, 45, 2)
+    +adaptiv-value("left", 195, 78, 2)
     transform: scale(0.8) rotate(-30deg) scalex(-1)
   .ball-ic.green
-    top: calc(5em/16)
-    left: calc(480em/16)
+    //top: calc(5em/16)
+    //left: calc(480em/16)
+    +adaptiv-value("top", 5, 2, 2)
+    +adaptiv-value("left", 480, 192, 2)
     transform: scale(0.8) rotate(-30deg) scaleX(-1)
   .ball-ic.yellow
-    top: calc(40em/16)
-    right: calc(371em/16)
+    //top: calc(40em/16)
+    //right: calc(371em/16)
+    +adaptiv-value("top", 40, 16, 2)
+    +adaptiv-value("right", 371, 148.4, 2)
     transform: scale(0.8) rotate(30deg)
   .ball-ic.violet
-    top: calc(80em/16)
-    right: calc(75em/16)
+    //top: calc(80em/16)
+    //right: calc(75em/16)
+    +adaptiv-value("top", 80, 32, 2)
+    +adaptiv-value("right", 75, 30, 2)
     transform: scale(0.8) rotate(30deg)
 
 
+.news-block .left-side
+  width: 292%
+  display: inline-block
+  +adaptiv-value("margin-right", 40, 20, 2)
+
+  .bl-info-img
+    display: inline-block
+    float: left
+    +adaptiv-value("margin-bottom", 10, 5, 2)
+    height: auto
+
+  .bl-info-descr
+    display: inline
+
+.news-list
+  display: inline-flex
+  flex-direction: column
+  +adaptiv-value("max-width", 480, 320, 2)
+  +phone-down
+    max-width: 100%
+
+  .bl-info-item
+    width: 100%
+    overflow: hidden
+    +adaptiv-value("margin-bottom", 20, 10, 2)
+    +adaptiv-value("max-height", 140, 100, 2)
+
+  .bl-info-img
+    min-width: 43%
+    height: auto
+
+.bl-top-block
+  display: flex
+
+.news-list .bl-info-descr
+  width: calc(100% - 43% - calc(10em/16))
+
+  p
+    white-space: nowrap
+    text-overflow: ellipsis
+    overflow: hidden
+
+
+.bl-top
+  position: relative
+  +adaptiv-value("padding-top", 310, 55, 2)
+  +adaptiv-value("padding-bottom", 15, 5, 2)
+  margin-top: 0
+
+  &:before
+    content: ""
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    +adaptiv-value("height", 400, 80, 2)
+    z-index: -1
+    background-image: url("../images/bg_top.svg")
+    background-repeat: no-repeat
+    background-size: cover
+
+  .ball-ic
+    &.red
+      +adaptiv-value("top", 100, 40, 2)
+      +adaptiv-value("left", 195, 78, 2)
+      transform: rotate(-30deg) scalex(-1)
+
+    &.green
+      +adaptiv-value("top", 5, 2, 2)
+      +adaptiv-value("left", 480, 192, 2)
+      transform: rotate(-30deg) scaleX(-1)
+
+    &.yellow
+      +adaptiv-value("top", 40, 16, 2)
+      +adaptiv-value("right", 371, 148.4, 2)
+      transform: rotate(30deg)
+
+    &.violet
+      +adaptiv-value("top", 80, 32, 2)
+      +adaptiv-value("right", 130, 52, 2)
+      transform: rotate(30deg)
+
+.team-page
+  .bl-info-item
+    width: 100%
+
+  .bl-info-img
+    min-width: calc(350em/16)
+    max-width: calc(350em/16)
+
+.news-block
+  display: flex
+  .bl-info-img
+    flex: 0 0 42%
+
+
+.team .news-block
+  .bl-info-img > img
+    position: static
+  .team-info ol li:before
+    position: static
+    padding-right: 3px

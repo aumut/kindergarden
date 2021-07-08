@@ -1,58 +1,83 @@
-@import "../general/variables"
+/* FEEDBACK */
+
 .feedback
   .container
     position: relative
   .bl-in
     background-color: transparent
-    padding: calc(8em/16) 0 calc(95em/16)
+    //+adaptiv-value("padding-top", 8, 0, 2)
+    //+adaptiv-value("padding-bottom", 95, 42, 2)
+    //padding-right: 0
+    //padding-left: 0
   .row
     display: flex
     justify-content: space-between
+    gap: 20px
+    +adaptiv-value("gap", 20, 10, 2)
+    +phone-down
+      flex-direction: column
+
   .ball-ic.blue
     top: calc(60em/16)
     left: calc(60em/16)
+    +adaptiv-value("top", 60, 24, 2)
+    +adaptiv-value("left", 60, 24, 2)
     transform: rotate(-50deg) scaleX(-1)
 
+  .col
+    width: 100%
+    +phone-down
+      //width: 100%
+      margin-bottom: 10px
+
 .field-group
-  margin-bottom: calc(20em/16)
+  //margin-bottom: calc(20em/16)
+  +adaptiv-value("margin-bottom", 30, 10, 2)
 
   &:last-child
     margin-bottom: 0
+
+  br
+    display: none
 
 .btn
   width: 100%
   background-color: red
   color: #ffffff
-  padding: 6px 0
   border: 0
   cursor: pointer
+  +adaptiv-value("padding-top", 6, 5, 2)
+  +adaptiv-value("padding-bottom", 6, 5, 2)
 
 .field
   width: 100%
   border: 1px solid $themecolor
   border-radius: 10px
-  padding: 13px 10px
+  +adaptiv-value("padding-top", 13, 10, 2)
+  +adaptiv-value("padding-bottom", 13, 7, 2)
+  +adaptiv-value("padding-left", 10, 5, 2)
+  +adaptiv-value("padding-right", 10, 5, 2)
 
 .field-label
-  font-size: 18px
-  line-height: 1.5
-  font-family: $font_Comfortaa_Bold
-  margin-bottom: 5px
+  font-family: $ff_ComfortaaBold
+  +adaptiv-value("font-size", $fs_h3, $fs_h3_mob, 2)
+  line-height: $lh_h3
+  font-weight: $fw_h3
+
 
 .form
   ::placeholder
-    color: #C4C4C4
-    font-size: 17px
+    color: $grey
+    +adaptiv-value("font-size", $fs_body, $fs_body_mob, 2)
     opacity: 1
 
-
   :-ms-input-placeholder
-    color: #C4C4C4
-    font-size: 17px
+    color: $grey
+    +adaptiv-value("font-size", $fs_body, $fs_body_mob, 2)
 
   ::-ms-input-placeholder
-    color: #C4C4C4
-    font-size: 17px
+    color: $grey
+    +adaptiv-value("font-size", $fs_body, $fs_body_mob, 2)
 
 .msg
   display: flex
@@ -64,19 +89,29 @@
   .field
     flex-grow: 1
     resize: none
+    +phone-down
+      height: 117px
 
-.col
-  width: 48%
+span[class*="form-control-wrap"].umassage
+  display: flex
+  flex-grow: 1
 
-.btn.send
+.btn.accent
   line-height: 2
-  margin-top: 32px
-  width: 48%
-  border-radius: 10px
-  background-color: #033E09
-  box-shadow: inset 0 4px 4px rgba(255, 255, 255, 0.25)
+  +adaptiv-value("width", 280, 165, 2)
+  +adaptiv-value("border-radius", 10, 5, 2)
+  background-color: $menucolor
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), inset 0px 4px 4px rgba(255, 255, 255, 0.25)
+  &:hover, &:active
+    box-shadow: none
+  +phone-down
+    width: 100%
 
-.send-wrap
+.send
+  +adaptiv-value("margin-top", 32, 0, 2)
+
+
+.btn-wrap
   width: 100%
   text-align: center
 

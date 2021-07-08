@@ -1,3 +1,4 @@
+/* ANIMATION */
 
 .ball
   display: inline-block
@@ -37,8 +38,8 @@
     transform: translateY(-25px) rotate(4deg)
 
 .flag-wrap
-  width: calc(800em/16)
-  height: calc(100em/16)
+  +adaptiv-value("width", 800, 320, 2)
+  +adaptiv-value("height", 100, 40, 2)
   border: 0px dotted cyan
   position: relative
   transform-style: preserve-3d
@@ -46,33 +47,37 @@
   justify-content: space-between
   position: absolute
   display: none
+  +laptop-down
+    display: none
   &-left
     top: calc(11em/16)
     left: calc(-77em/16)
+    +adaptiv-value("top", 11, 4.4, 2)
+    +adaptiv-value("left", -77, -30.8, 2)
     transform: scale(0.8) rotate(-30deg)
   &-right
-    top: calc(-24em/16)
-    right: calc(-53em/16)
+    +adaptiv-value("top", -24, 9.6, 2)
+    +adaptiv-value("right", -53, -21.2, 2)
     transform: scale(0.8) rotate(5deg)
 
 .flag
   display: flex
   height: calc(70em/16)
   width: calc(45em/16)
-  //background: hsl(var(--hue, 43), 90%, 55%)
-  //color: hsl(43, 90%, var(--text, 5%))
+  +adaptiv-value("width", 45, 18, 2)
+  +adaptiv-value("height", 70, 28, 2)
   clip-path: polygon(0% 0%, 100% 0%, 50% 100%)
   transform-origin: 50% 0%
   justify-content: center
   align-items: center
   padding-bottom: 1rem
 
-.string
-  display: none
+
 
 @supports (offset-path: path("M0,0 C100,100 700,200 800,100"))
   .flag-wrap
     height: calc(230em/16)
+    +adaptiv-value("height", 230, 92, 2)
 
     &:nth-of-type(even)
       --transform: rotate(0deg)
@@ -91,20 +96,24 @@
 @supports (d: path("M0,0 C100,100 700,200 800,100"))
   .string
     position: absolute
-    width: calc(800em/16)
+    //width: calc(800em/16)
+    +adaptiv-value("width", 800, 320, 2)
     top: 0
     left: 0
-    height: calc(230em/16)
+    //height: calc(230em/16)
+    +adaptiv-value("height", 230, 92, 2)
     display: block
     background: transparent
     clip-path: none
 
     svg
       position: absolute
-      width: calc(800em/16)
+      //width: calc(800em/16)
+      +adaptiv-value("width", 800, 320, 2)
       top: 0
       left: 0
-      height: calc(230em/16)
+      //height: calc(230em/16)
+      +adaptiv-value("height", 230, 92, 2)
       display: block
       background: transparent
       clip-path: none
@@ -122,3 +131,39 @@
     transform: rotate(0deg)
   to
     transform: rotate(359deg)
+
+.n2-ss-widget
+  background-color: #B4FFB7
+
+.nextend-arrow
+  position: absolute
+  border-radius: 50%
+  background-color: rgba(180, 255, 183, 1)
+  width: calc( 30px + 50 * ((100vw - 320px) / 1600) ) !important
+  height: calc( 30px + 50 * ((100vw - 320px) / 1600) ) !important
+  top: 50% !important
+  +adaptiv-value("margin-top", 0, -13, 2)
+  +phone-down
+    background-color: rgba(180, 255, 183, 0.63)
+
+.nextend-arrow-previous
+  left: calc( 0px - 95 * ((100vw - 320px) / 1600) ) !important
+
+.nextend-arrow-next
+  right: calc( 0px - 95 * ((100vw - 320px) / 1600) ) !important
+
+.slider-control
+  position: absolute
+  border-radius: 50%
+  background-color: #B4FFB7
+  background-image: url(../images/arrow-left.svg)
+  background-repeat: no-repeat
+  background-size: 40%
+  background-position: center
+  +adaptiv-value("width", 80, 40, 2)
+  +adaptiv-value("height", 80, 40, 2)
+  top: 50%
+  margin-top: 0
+
+
+

@@ -1,27 +1,46 @@
+/* CONTACTS */
+
 .contacts
+  &.bl
+    background-color: $menucolor
+    color: $bg_body
+    .container
+      background-color: $menucolor
+  .title
+    color: $bg_body
   .container
     position: relative
   .bl-in
-    display: flex
-    justify-content: space-between
-    padding: 0
     background-color: transparent
+
   &-map
-    min-width: calc(615em/16)
-    background-color: #8D8D8D
+    +tablet-down
+      order: 2
+    +phone-down
+      height: 165px!important
+    ymaps
+      +phone-down
+        height: 165px!important
+
   &-address
-    margin-left: calc(10em/16)
-    display: flex
-    flex-direction: column
-    padding: 0 calc(5em/16) calc(35em/16) 0
+    +adaptiv-value("margin-top", 30, 5, 2)
     .title
       text-align: left
-      margin-bottom: calc(15em/16)
+      +adaptiv-value("margin-bottom", 15, 5, 2)
     ul
       list-style: none
+      display: flex
+      +adaptiv-value("column-gap", 30, 0, 2)
+      +laptop-down1
+        flex-direction: column
     li
-      margin-bottom: calc(15em/16)
+      width: 100%
+      +adaptiv-value("margin-bottom", 15, 10, 2)
+
+    address
+      font-style: normal
+
   .ball-ic.aqua
-    bottom: calc(-186em/16)
-    right: calc(125em/16)
+    +adaptiv-value("bottom", -186, -74.4, 2)
+    +adaptiv-value("right", 125, 50, 2)
     transform: rotate(35deg)

@@ -1,0 +1,31 @@
+/* SCROLL */
+$w_scroll: 15
+$w_scroll_mob: 8
+$h_scroll: 20
+$h_scroll_mob: 9
+$br_scroll: 20px
+$bw_scroll: 3.75
+$bw_scroll_mob: 2
+
+.scrolled
+  overflow-y: auto
+  scrollbar-color: $menucolor $themecolor
+  scrollbar-width: thin
+
+.scrolled::-webkit-scrollbar
+  +adaptiv-value("width", $w_scroll, $w_scroll_mob, 2)
+  +adaptiv-value("height", $h_scroll, $h_scroll_mob, 2)
+  background-color: $themecolor
+  border-radius: $br_scroll
+
+.scrolled::-webkit-scrollbar-track
+  background-color: $themecolor
+  border-radius: $br_scroll
+
+.scrolled::-webkit-scrollbar-thumb
+  background-color: $menucolor
+  border-radius: $br_scroll
+  border-style: solid
+  border-color: $themecolor
+  +adaptiv-value("border-width", $bw_scroll, $bw_scroll_mob, 2)
+
