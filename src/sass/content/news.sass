@@ -181,32 +181,23 @@
     top: 0
     left: 0
     width: 100%
-    +adaptiv-value("height", 400, 80, 2)
+    +adaptiv-value("height", 436, 90, 2)
     z-index: -1
-    background-image: url("../images/bg_top.svg")
+    background-image: url("../images/Fon1.svg")
     background-repeat: no-repeat
     background-size: cover
+  &:after
+    content: ""
+    position: absolute
+    top: 0
+    right: 0
+    +adaptiv-value("width", 500, 80, 2)
+    height: 100%
+    z-index: -1
+    background-image: url("../images/Sayt_sloi_sonce_krug_03.svg")
+    background-repeat: no-repeat
+    background-size: contain
 
-  .ball-ic
-    &.red
-      +adaptiv-value("top", 100, 40, 2)
-      +adaptiv-value("left", 195, 78, 2)
-      transform: rotate(-30deg) scalex(-1)
-
-    &.green
-      +adaptiv-value("top", 5, 2, 2)
-      +adaptiv-value("left", 480, 192, 2)
-      transform: rotate(-30deg) scaleX(-1)
-
-    &.yellow
-      +adaptiv-value("top", 40, 16, 2)
-      +adaptiv-value("right", 371, 148.4, 2)
-      transform: rotate(30deg)
-
-    &.violet
-      +adaptiv-value("top", 80, 32, 2)
-      +adaptiv-value("right", 130, 52, 2)
-      transform: rotate(30deg)
 
 .team-page
   .bl-info-item

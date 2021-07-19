@@ -1,5 +1,6 @@
 /***** BTN MORE ****/
 $wBtnMore: 30px
+$hBtnMore: 45px
 .hide-text-wrap
   position: relative
   .btn--more
@@ -32,12 +33,17 @@ $wBtnMore: 30px
 .btn--more
   display: inline-block
   width: $wBtnMore
-  height: $wBtnMore
+  height: $hBtnMore
+  color: $grey
   background:
     color: transparent
     repeat: no-repeat
     size: contain
-    image: url("../img/arrow-grad.svg")
-  background-color: red
+    image: url("../images/Arrow_big.svg")
+    position: center
+  background-color: transparent
   &:active
     box-shadow: none
+  &:hover
+    color: $btnmore_col
+    background-image: url("../images/Arrow_big_hover.svg")

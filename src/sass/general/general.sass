@@ -47,7 +47,7 @@ h1
     +tablet-down
       text-align: center
   &+.subtitle
-    color: $blue1
+    color: $c_h1
     text-align: right
     +adaptiv-value("font-size", 50, 25, 2)
     line-height: 1
@@ -63,7 +63,7 @@ h2
   line-height: $lh_h2
   font-weight: $fw_h2
   &.title
-    color: $menucolor
+    color: $title_col
 
 h3
   +adaptiv-value("font-size", $fs_h3, $fs_h3_mob, 2)
@@ -301,6 +301,18 @@ h4
     bottom: unset
     left: unset
     height: unset
-    background-image: none
     margin: 0 auto
+    color: $grey
+    line-height: 1
+    width: auto
+    +adaptiv-value("font-size", 18, 16, 2)
+    +adaptiv-value("padding-bottom", 25, 15, 2)
+    &:hover
+      color: $btnmore_col
 
+
+.br-top
+  border-top: 1px solid $white
+
+.w-100
+  width: 100%!important

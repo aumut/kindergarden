@@ -2,14 +2,16 @@
 
 .contacts
   &.bl
-    background-color: $menucolor
+    background-color: $menu_bg
     color: $bg_body
     .container
-      background-color: $menucolor
+      background-color: $menu_bg
   .title
-    color: $bg_body
+    color: $menucolor
   .container
     position: relative
+    +adaptiv-value("padding-bottom", 30, 5, 2)
+
   .bl-in
     background-color: transparent
 
@@ -25,6 +27,7 @@
 
   &-address
     +adaptiv-value("margin-top", 30, 5, 2)
+    +adaptiv-value("margin-bottom", 30, 5, 2)
     .title
       text-align: left
       +adaptiv-value("margin-bottom", 15, 5, 2)
@@ -41,4 +44,6 @@
     address
       font-style: normal
 
-
+.copyright
+  text-align: center
+  +adaptiv-value("margin-top", 30, 5, 2)
