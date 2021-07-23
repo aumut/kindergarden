@@ -29,99 +29,12 @@
   animation-duration: 2s
 
 
-
 @keyframes balloons
   0%,100%
     transform: translateY(0) rotate(-4deg)
 
   50%
     transform: translateY(-25px) rotate(4deg)
-
-.flag-wrap
-  +adaptiv-value("width", 800, 320, 2)
-  +adaptiv-value("height", 100, 40, 2)
-  border: 0px dotted cyan
-  position: relative
-  transform-style: preserve-3d
-  display: flex
-  justify-content: space-between
-  position: absolute
-  display: none
-  +laptop-down
-    display: none
-  &-left
-    top: calc(11em/16)
-    left: calc(-77em/16)
-    +adaptiv-value("top", 11, 4.4, 2)
-    +adaptiv-value("left", -77, -30.8, 2)
-    transform: scale(0.8) rotate(-30deg)
-  &-right
-    +adaptiv-value("top", -24, 9.6, 2)
-    +adaptiv-value("right", -53, -21.2, 2)
-    transform: scale(0.8) rotate(5deg)
-
-.flag
-  display: flex
-  height: calc(70em/16)
-  width: calc(45em/16)
-  +adaptiv-value("width", 45, 18, 2)
-  +adaptiv-value("height", 70, 28, 2)
-  clip-path: polygon(0% 0%, 100% 0%, 50% 100%)
-  transform-origin: 50% 0%
-  justify-content: center
-  align-items: center
-  padding-bottom: 1rem
-
-
-
-@supports (offset-path: path("M0,0 C100,100 700,200 800,100"))
-  .flag-wrap
-    height: calc(230em/16)
-    +adaptiv-value("height", 230, 92, 2)
-
-    &:nth-of-type(even)
-      --transform: rotate(0deg)
-
-    &:nth-of-type(2)
-      --transform: scaleX(-1) rotate(-8deg)
-
-    &:nth-of-type(1)
-      --transform: rotate(-4deg)
-
-  .flag:not(.string)
-    position: absolute
-    offset-anchor: 50% 0%
-    offset-path: path("M0,0 C100,100 700,200 800,100")
-
-@supports (d: path("M0,0 C100,100 700,200 800,100"))
-  .string
-    position: absolute
-    //width: calc(800em/16)
-    +adaptiv-value("width", 800, 320, 2)
-    top: 0
-    left: 0
-    //height: calc(230em/16)
-    +adaptiv-value("height", 230, 92, 2)
-    display: block
-    background: transparent
-    clip-path: none
-
-    svg
-      position: absolute
-      //width: calc(800em/16)
-      +adaptiv-value("width", 800, 320, 2)
-      top: 0
-      left: 0
-      //height: calc(230em/16)
-      +adaptiv-value("height", 230, 92, 2)
-      display: block
-      background: transparent
-      clip-path: none
-
-    path
-      stroke: hsla(183, 20%, 30%, 0.3)
-      stroke-width: 1px
-      d: path("M0,0 C100,100 700,200 800,100")
 
 .rotate
   animation: rotation 8s infinite linear
@@ -178,6 +91,4 @@
   +adaptiv-value("height", 80, 40, 2)
   top: 50%
   margin-top: 0
-
-
 

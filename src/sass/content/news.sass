@@ -127,15 +127,20 @@
 
 
 .news-block .left-side
-  width: 292%
+  flex-grow: 1
   display: inline-block
   +adaptiv-value("margin-right", 40, 20, 2)
+  +laptop-down
+    +adaptiv-value("margin-bottom", 30, 20, 2)
 
   .bl-info-img
     display: inline-block
     float: left
     +adaptiv-value("margin-bottom", 10, 5, 2)
-    height: auto
+    +adaptiv-value("width", 350, 320, 2)
+    +adaptiv-value("height", 250, 230, 2)
+    position: relative
+    //height: auto
 
   .bl-info-descr
     display: inline
@@ -149,7 +154,7 @@
 
   .bl-info-item
     width: 100%
-    overflow: hidden
+    //overflow: hidden
     +adaptiv-value("margin-bottom", 20, 10, 2)
     +adaptiv-value("max-height", 140, 100, 2)
 
@@ -171,33 +176,14 @@
 
 .bl-top
   position: relative
-  +adaptiv-value("padding-top", 310, 55, 2)
+  //+adaptiv-value("padding-top", 310, 55, 2)
   +adaptiv-value("padding-bottom", 15, 5, 2)
   margin-top: 0
 
-  &:before
-    content: ""
-    position: absolute
-    top: 0
-    left: 0
-    width: 100%
-    +adaptiv-value("height", 436, 90, 2)
-    z-index: -1
-    background-image: url("../images/Fon1.svg")
-    background-repeat: no-repeat
-    background-size: cover
-  &:after
-    content: ""
-    position: absolute
-    top: 0
-    right: 0
-    +adaptiv-value("width", 500, 80, 2)
-    height: 100%
-    z-index: -1
-    background-image: url("../images/Sayt_sloi_sonce_krug_03.svg")
-    background-repeat: no-repeat
-    background-size: contain
-
+  .container
+    +adaptiv-value("margin-top", -100, 0, 2)
+    z-index: 1
+    position: relative
 
 .team-page
   .bl-info-item
@@ -209,6 +195,8 @@
 
 .news-block
   display: flex
+  +laptop-down
+    flex-direction: column
   .bl-info-img
     flex: 0 0 42%
 
@@ -219,3 +207,34 @@
   .team-info ol li:before
     position: static
     padding-right: 3px
+
+
+.fon
+  width: 100%
+  //+adaptiv-value("height", 436, 90, 2)
+
+.sun
+  position: absolute
+  //top: -105px
+  +adaptiv-value("top", -105, -10, 2)
+  right: 0
+  +adaptiv-value("width", 500, 80, 2)
+
+.raduga
+  position: absolute
+  top: 0
+  left: 0
+  width: 62%
+
+//.bl-top
+  height: 436px
+
+
+//.menu, .bl, .baby-icon-wrap
+  display: none
+//.bl-top
+  display: block
+  margin-left: 0
+  width: 100%
+  .container
+    display: none
