@@ -14,8 +14,9 @@
       flex-direction: column
       flex-wrap: nowrap
 
-    &.excerpt
-      +adaptiv-value("height", 450, 275, 2)
+    //&.excerpt
+      height: 600px
+      //+adaptiv-value("height", 450, 275, 2)
 
   &-item
     display: flex
@@ -83,47 +84,6 @@
     +adaptiv-value("line-height", 19, 14, 2)
   //.container
     +adaptiv-value("padding-bottom", 30, 10, 2)
-
-//.bg-head
-  position: relative
-  padding-top: calc(270em/16)
-  &:before
-    content: ""
-    position: absolute
-    top: 0
-    left: 0
-    width: 100%
-    height: calc(400em/16)
-    z-index: -1
-    background:
-      color: $light-blue
-      image: url("../images/bg_top.svg")
-      repeat: no-repeat
-      size: cover
-  .ball-ic.red
-    //top: calc(100em/16)
-    //left: calc(195em/16)
-    +adaptiv-value("top", 100, 45, 2)
-    +adaptiv-value("left", 195, 78, 2)
-    transform: scale(0.8) rotate(-30deg) scalex(-1)
-  .ball-ic.green
-    //top: calc(5em/16)
-    //left: calc(480em/16)
-    +adaptiv-value("top", 5, 2, 2)
-    +adaptiv-value("left", 480, 192, 2)
-    transform: scale(0.8) rotate(-30deg) scaleX(-1)
-  .ball-ic.yellow
-    //top: calc(40em/16)
-    //right: calc(371em/16)
-    +adaptiv-value("top", 40, 16, 2)
-    +adaptiv-value("right", 371, 148.4, 2)
-    transform: scale(0.8) rotate(30deg)
-  .ball-ic.violet
-    //top: calc(80em/16)
-    //right: calc(75em/16)
-    +adaptiv-value("top", 80, 32, 2)
-    +adaptiv-value("right", 75, 30, 2)
-    transform: scale(0.8) rotate(30deg)
 
 
 .news-block .left-side
@@ -226,15 +186,3 @@
   left: 0
   width: 62%
 
-//.bl-top
-  height: 436px
-
-
-//.menu, .bl, .baby-icon-wrap
-  display: none
-//.bl-top
-  display: block
-  margin-left: 0
-  width: 100%
-  .container
-    display: none

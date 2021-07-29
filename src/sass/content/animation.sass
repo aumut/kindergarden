@@ -64,18 +64,21 @@
   background-color: rgba(180, 255, 183, 1)
   width: calc( 30px + 50 * ((100vw - 320px) / 1600) ) !important
   height: calc( 30px + 50 * ((100vw - 320px) / 1600) ) !important
-  top: 50% !important
-  +adaptiv-value("margin-top", 0, -13, 2)
+  top: 12% !important
+  //+adaptiv-value("margin-top", 0, -13, 2)
   +phone-down
     background-color: rgba(180, 255, 183, 0.63)
 
+  img
+    padding: calc( 0px + 24 * ((100vw - 320px) / 1600) ) !important
+
 .nextend-arrow-previous
-  left: calc( 0px - 95 * ((100vw - 320px) / 1600) ) !important
+  left: calc( 0px - 110 * ((100vw - 320px) / 1600) ) !important
   +tablet-down
     left: 0 !important
 
 .nextend-arrow-next
-  right: calc( 0px - 95 * ((100vw - 320px) / 1600) ) !important
+  right: calc( 0px - 110 * ((100vw - 320px) / 1600) ) !important
   +tablet-down
     right: 0 !important
 
