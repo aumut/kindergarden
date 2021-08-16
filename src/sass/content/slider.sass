@@ -79,6 +79,7 @@
 
 .slider
   height: 450px
+  position: relative
 
 .n2-ss-slider div[class^="n2-ss-slider"]
   //height: calc( 152px + 203  * ((100vw - 320px) / 1600) ) !important
@@ -90,8 +91,23 @@
 
 .attention
   position: absolute
-  top: 0
-  left: 0
-  width: 100px
-  height: 100px
-  background-color: yellow
+  top: calc( calc(-#{$wAttention_mob + px} / 2) - calc(#{$wAttention}/2 - #{$wAttention_mob}/2)  * ((100vw - 320px) / 1600) )
+  right: calc( calc(-#{$wAttention_mob + px} / 2) - calc(#{$wAttention}/2 - #{$wAttention_mob}/2)  * ((100vw - 320px) / 1600) )
+  +adaptiv-value("width", $wAttention, $wAttention_mob, 2)
+  +adaptiv-value("height", $wAttention, $wAttention_mob, 2)
+  background-color: #FF9100
+  border-radius: 50%
+  +adaptiv-value("font-size", 12, 7, 2)
+  overflow: hidden
+  display: flex
+  align-items: center
+  justify-content: center
+  box-shadow: 0 0 0 rgba(204,169,44, 0.4)
+  animation: pulse 2s infinite
+  cursor: pointer
+  +tablet-down
+    right: 0
+  &>p
+    +adaptiv-value("padding", 30, 10, 2)
+    text-align: center
+    transform: rotate(30deg)
