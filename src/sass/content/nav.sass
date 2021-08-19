@@ -8,6 +8,7 @@
   left: 0
   display: flex
   flex-direction: column
+  justify-content: flex-start
   +adaptiv-value("width", $w_menu, $w_menu_mob, 2)
   +adaptiv-value("min-width", $w_menu, $w_menu_mob, 2)
   +adaptiv-value("padding-top", 20, 10, 2)
@@ -21,7 +22,7 @@
   ul
     display: flex
     flex-direction: column
-    justify-content: space-around
+    justify-content: flex-start
     line-height: $lh_menu
     margin-bottom: $mb_logo
     flex-grow: 1
@@ -119,11 +120,25 @@
   display: flex
   align-items: flex-start
   flex-direction: row
-  margin-bottom: 0
+  flex-grow: unset
+  +phone-down
+    margin-bottom: 38px
   li a
     +adaptiv-value("font-size", 18, 16, 2)
+    transition: all 0.3s ease-in-out
   li
     margin-bottom: 0
+    &:hover
+      border-bottom-color: transparent
+      a
+        transform: scale(1.06)
   li:first-child
     border-right: 1px solid $menucolor
+    a
+      +adaptiv-value("padding-right", 12, 10, 2)
+      text-align: right
+  li:last-child
+    a
+      +adaptiv-value("padding-left", 12, 10, 2)
+      text-align: left
   
