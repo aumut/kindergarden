@@ -1,20 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <svg
-   xmlns:dc="http://purl.org/dc/elements/1.1/"
-   xmlns:cc="http://creativecommons.org/ns#"
-   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
    xmlns:svg="http://www.w3.org/2000/svg"
    xmlns="http://www.w3.org/2000/svg"
    xmlns:xlink="http://www.w3.org/1999/xlink"
-   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
-   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    width="147.85477mm"
    height="108.74973mm"
    viewBox="0 0 147.85477 55.202906"
    version="1.1"
-   id="svg1059"
-   sodipodi:docname="logo0709-final.svg"
-   inkscape:version="1.0.2 (e86c870879, 2021-01-15, custom)">
+   id="svg1059">
   <defs
      id="defs1053">
     <linearGradient
@@ -46,41 +39,19 @@
          style="stop-color:rgb(31,110,179);stop-opacity:1.00"
          id="stop10-8" />
     </linearGradient>
+    <path
+            style="clip-rule:evenodd;fill:none;fill-rule:evenodd;stroke:none;stroke-width:0.321974px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;image-rendering:optimizeQuality;shape-rendering:geometricPrecision;text-rendering:geometricPrecision"
+            d="m 49.421356,94.665784 c 0,0 -3.265972,26.775376 54.089384,31.720396 16.99073,-1.16588 57.5673,-4.91396 58.8274,-31.720396 v 0"
+            id="path1051-4"
+             />
+    <path
+            style="clip-rule:evenodd;fill:none;fill-rule:evenodd;stroke:none;stroke-width:0.264584px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;image-rendering:optimizeQuality;shape-rendering:geometricPrecision;text-rendering:geometricPrecision"
+            d="m 59.03866,83.075194 c 0,0 -2.63961,22.371526 43.71588,26.503216 13.73217,-0.97412 46.52679,-4.10574 47.54522,-26.503216 v 0"
+            id="path1051"
+             />
   </defs>
-  <sodipodi:namedview
-     id="base"
-     pagecolor="#ffffff"
-     bordercolor="#666666"
-     borderopacity="1.0"
-     inkscape:pageopacity="0.0"
-     inkscape:pageshadow="2"
-     inkscape:zoom="0.49497475"
-     inkscape:cx="276.84433"
-     inkscape:cy="357.35083"
-     inkscape:document-units="mm"
-     inkscape:current-layer="layer1"
-     inkscape:document-rotation="0"
-     showgrid="false"
-     inkscape:window-width="1920"
-     inkscape:window-height="1017"
-     inkscape:window-x="-8"
-     inkscape:window-y="-8"
-     inkscape:window-maximized="1" />
-  <metadata
-     id="metadata1056">
-    <rdf:RDF>
-      <cc:Work
-         rdf:about="">
-        <dc:format>image/svg+xml</dc:format>
-        <dc:type
-           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
-      </cc:Work>
-    </rdf:RDF>
-  </metadata>
+
   <g
-     inkscape:label="Layer 1"
-     inkscape:groupmode="layer"
      id="layer1"
      transform="translate(-31.285581,-51.234118)">
     <ellipse
@@ -119,11 +90,7 @@
        cy="79.036316"
        rx="3.1216848"
        ry="3.1216855" />
-    <path
-       style="clip-rule:evenodd;fill:none;fill-rule:evenodd;stroke:none;stroke-width:0.264584px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;image-rendering:optimizeQuality;shape-rendering:geometricPrecision;text-rendering:geometricPrecision"
-       d="m 59.03866,83.075194 c 0,0 -2.63961,22.371526 43.71588,26.503216 13.73217,-0.97412 46.52679,-4.10574 47.54522,-26.503216 v 0"
-       id="path1051"
-       sodipodi:nodetypes="cccc" />
+
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:bold;font-size:15px;line-height:1.25;font-family:bauhausLightCTT, sans-serif;fill:#d342a1;fill-opacity:1;stroke:#d342a1;stroke-width:0.264583"
@@ -131,11 +98,7 @@
          xlink:href="#path1051"
          id="textPath1812"><tspan
            id="tspan1247">     Мир детсва</tspan></textPath></text>
-    <path
-       style="clip-rule:evenodd;fill:none;fill-rule:evenodd;stroke:none;stroke-width:0.321974px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;image-rendering:optimizeQuality;shape-rendering:geometricPrecision;text-rendering:geometricPrecision"
-       d="m 49.421356,94.665784 c 0,0 -3.265972,26.775376 54.089384,31.720396 16.99073,-1.16588 57.5673,-4.91396 58.8274,-31.720396 v 0"
-       id="path1051-4"
-       sodipodi:nodetypes="cccc" />
+
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:bold;font-size:20px;line-height:1.25;font-family:bauhausLightCTT, sans-serif;fill:#3375b8;fill-opacity:1;stroke:#3375b8;stroke-width:0.264583"
